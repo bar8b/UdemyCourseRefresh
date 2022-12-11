@@ -49,14 +49,31 @@ public static int calculate(int a, int b){
 
 jeżeli a == true to metoda zakończy działanie na "return z". jeżlei a == false to wyświetli się "return y"
 
-# 4. Overloaded / overridden
+# 4. Overloading / Overridding
 
-- Overloaded - ta sama nazwa metody -> inne parametry
-- Overridden - implementowana przez inne klasy z znacznikiem @Overriden
+- **Overloading** - ta sama nazwa metody -> inne parametry. (odwołuje się to do polimorfismu javy)
+  - **Stosowane do metod STATIC oraz INSTANCE.**
+  - Overloaded methods...:
+    - mogą zwracać inne typy parametrów
+    - mogą mieć inne modyfikatory dostępu
+    - mogą sprawdzać inne wyjątki
+- **Overridding** - implementowana metoda z klasy nadrzędnej do klasy podrzędnej
+  - **Stosowane tylko do metody INSTANCE.**
+  - Metoda nadpisana ma taką samą nazwę i takie same argumenty,
+  - Metody nadpisane można oznaczać znacznikiem @Override
+  - Method Overriding (Runtime Polymorphism/Dynamic Mothod Dispatch)
+  - Overrided methods...:
+    - muszą zwracać ten sam typ parametru jak w parents class
+    - nie moga mieć mniejszego dostępu (modyfikatory dostępu) niż w parents class
+      tj. jeżeli w subklasie jest protected, to klasa podrzędna może być protected lub public.
+    - nie mogą sprawdzać innych wyjątków niż w parent class
+  - można nadpisywać metody tylko w subklasach
+  - konstruktory (constructors), final methods i private methods nie mogą być nadpisywane.
+  - 
 
 # 5 Switch case:
 
-**nie może być double i long**
+**typ zmiennej w () nie może być double i long**
 
     **switch **               vs.       **switch statement**
 
@@ -117,8 +134,8 @@ sprawia, że coś jest wspólne dla wszystkich obektów tej klasy.
 - jeżeli zmieni się parametr static, w jednej instancji, to zmieni się on również w pozostałych.
 
 - Może to być przydatne np w sytuacji, gdy wiemy i chcemy zrobić tak, żeby wszystkie
-obiekty danej klasy miały jakąś część wspólną.
-Taką częścią może być właśnie jakaś wartość pola statycznego.
+obiekty danej klasy miały jakąś część wspólną. Taką częścią może być właśnie jakaś 
+wartość pola statycznego.
 
   - Pola Statyczne:
 
@@ -203,7 +220,7 @@ jest default constructor,
 - liczba parametrów, ich kolejnosć lub typ w nadpisywanych konstruktorach musi się różnić.
 
 ## 9.1 Constructor chaining - łańcuch konstruktorów
-- Wywołanie w konstruktorze overloaded constructor
+- Wywołanie w konstruktorze innych konstruktorów.
 - można wywołać konstruktor tylko za pomocą innego konstruktora,
 - nalezy użyć this(innyConstruktor), aby wywołać inny construktor jako parametr,
 - this musi być pierwszym wymaganym elementem, jeżeli używamy z innego contruktora np:
@@ -237,33 +254,40 @@ Poprzez zadeklarowanie pól w nawiasach, Records sam tworzy ciało, ale nie poka
 Różnica między POJO a Record:
 - recordów nie da się modyfikować - są immutable.
 
-# 11. super() / this. / this()
+# 11. super() / super / this / this()
 
-- This - odwołuje się do pól klasy. Dzięki zastosowaniu w metodzie:
+**Stosowane tylko w metodach instancji. Nie można używać ich w elementach static**
+
+- this. - odwołuje się do pól klasy. Dzięki zastosowaniu w metodzie:
 this.poleKlasy = poleMetody
 
-przypisujemy polu zadeklarowanej w klasie parametr pola zadeklarowanego w metodzie 
+Przypisujemy polu zadeklarowanej w klasie parametr zadeklarowany w metodzie o tej samej nazwie.
 
-- this() stosowany do odwoływania się w konstruktorze do innego konstruktora, opisane w 9.1
+Stosuje się je dla parametrów i pól tej samej klasy.
+
+- super. - wywoływanie metod klas nadrzędnych w klasie podrzędnej. 
+Metody mają taką samą nazwę.
+
+- this() stosowany do odwoływania się w konstruktorze do innego konstruktora tej samej klasy.
+Musi być użyte, na początku konstruktora.
 
 - super () ma podobne zastosowanie jak this().
+Musi być użyte, na początku konstruktora.
 Super pozwala się odwołać do konstruktora klasy nadrzędnej.
 
 ## super() vs. this() 
 
 Super oraz this nie może być wywołane jednocześnie w tym samym konstruktorze.
-Super oraz this nie może być wywołane jednocześnie w tym samym konstruktorze.
 
 Jeżeli nie odniesiemy się do konstruktora poprzez wywołanie super(), java domyślnie stworzy taki
-konstruktor, odwołując się do klasy nadrzędnej. 
+konstruktor, odwołując się do klasy nadrzędnej.
 
-Jeżeli klasa nadrzędna nie ma domyślnego konstruktora, wówczas trzeba specjalnie wywołać super() w każdym
+Jeżeli klasa nadrzędna nie ma domyślnego konstruktora, wówczas trzeba specjalnie wywołać super()
 konstruktorze, podając odpowiednie argumenty dla tego konstruktora.
-
 
 # 12 Polimorfizm
 
-jedna klasa sprawia ze obiekty tej klasy moga mieć różne postaci.   
+jedna klasa sprawia ze obiekty tej klasy moga mieć różne postacie.   
 
 # 13 toString ()
 
@@ -315,4 +339,58 @@ Aby wyświetlała się prawidłowa nazwa, należy do clasy student overrideować
         }
     }
 
-wówczas wyświetli się Max is 21. Nadpisywanie klas bez ich modyfikacji nie ma sensu.
+Wówczas wyświetli się Max is 21. Nadpisywanie klas bez ich modyfikacji nie ma sensu.
+
+# 14 Kopiowanie płytkie i głębokie (shallow copy / deep copy)
+
+Klonowanie polega na stworzeniu nowego obiektu (nowej referencji) w oparciu, o istniejący już obiekt.
+- W metodzie main, w której wywoływany jest metoda clone() musi znaleźć się - throws CloneNotSupportedException
+- Klonowanie obiektów odbywa się za pomocą metody clone().
+- Należy w klasie kolowanej zaimplementować interface Clonable i override metode wywoływaną przez ten interface.
+- Domyślnie metoda clone() jest dostępna w obrębie pakietu, ale można zmienić modyfikator na public.
+- Utworzony sklonowany obiekt będzie typu Object dlatego aby był typu obiektu, który klonowaliśmy, należy go rzutować:
+  np. klonowanie punktu 1 i nadanie punktowi 2 typu klasu Punkt
+
+    Punkt punkt2 = (Punkt) punkt1.clone();  
+
+- **Płytkie kopiowanie obiektów**
+Płytkie klonowanie sprawdz się w przypadku gdy klonujemy obiekt, w którym zadeklarowane są pola o prymitywnych typach.
+Płytkie kopiowanie obiektów tworzy co prawda nowy obiekt i kopiuje pola, ale pola kopiuje jedynie na zasadzie
+przepisania wartości pól typów prostych oraz przypisania tych samych referencji w przypadku pól typów obiektowych.
+Nie występują żadne problemy, ponieważ przechowuje ona jedynie dwa pola typu int (typ prosty).
+Jeżeli zostanie sklonowany obiekt, w którym zadeklarowane są pola typu Obiektowego, wówczas zaczną wyskakiwać błędy
+wynikające z braku utworznoych nowych refentencji do pól obiektowych. 
+
+- **Głebokie klonowanie**
+Poprzez wpisanie innej deklaracji w nadpisanej metodzie Object w klonowanej klasie (Odcinek), zostaną sklonowane również
+pola w obiektach typu obiektowego w niniejszej klasie. Aby to zostało zrobione należy w @ sklonować poszczególne pola klasy niżej:
+
+
+    @Override
+        public Object clone() throws CloneNotSupportedException {
+            Odcinek odcinek = new Odcinek();
+            Punkt pStart = (Punkt) this.getStart().clone();
+            Punkt pKoniec =  (Punkt) this.getKoniec().clone();
+            odcinek.setStart(pStart);
+            odcinek.setKoniec(pKoniec);
+
+             return odcinek;
+     }
+
+# 15 Formatowanie tekstu w kodzie:
+
+- \t - tabulator
+- \n - enter
+- \" - cudzysłów w tekst
+- \\ - ukośnik
+- \u2022 - kropka(punktor)
+- " " " - rozpoczęcie i zakończenie bloku tekstu (nie potrzebuje + i "")
+- System.out.printf("Masz %d lat", age); - w miejsce %d wprowadzi wcześniej zadeklarowaną zmienną age;
+  - 'f' - %f - stosowane do zmienno przecinkowych, 
+  - 'd' - %d - stosowane do całkowitych
+  - 'n' - %n - podobne działanie do \n 
+  - %.2f - wyświetli dwa miejsca po przecinku
+  - 'c' - %c - char
+  - System.out.printf("Age = %d, Birth year = %d", age, yearOfBirth); <- działa to też tak
+  - formattedString = "Your age is %d".formatted(age); <- działa to też tak
+
