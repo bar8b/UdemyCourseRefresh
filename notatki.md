@@ -264,3 +264,55 @@ konstruktorze, podając odpowiednie argumenty dla tego konstruktora.
 # 12 Polimorfizm
 
 jedna klasa sprawia ze obiekty tej klasy moga mieć różne postaci.   
+
+# 13 toString ()
+
+    class Main Extends Object{
+        psvm(){
+            Student max = new Student ("Max", 21);
+            sout(max.toString());
+        }   
+    }
+    class Student{
+        private String name;
+        private int age;
+    
+        Student (String name, int age){
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+When an instance is created, it's assigned  a hashCode, and that hashCode is what can
+tell us if our multiple references,  are pointing to a single instance.
+It's a mechanism for comparison, in other words. This really is like an address for a house,
+which we talked about in our  examples, to explain the difference
+between references and objects or instances. Anyway, this isn't what we want printed out,  
+we really want to print out the  name and age of our student. 
+
+W takim przypadku otrzymamy Student @65as776 gdzie @...jest "adresem" obiektu.
+Aby wyświetlała się prawidłowa nazwa, należy do clasy student overrideować metodę toString() i ją zmodyfikować
+
+    class Main Extends Object{
+        psvm(){
+            Student max = new Student ("Max", 21);
+            sout(max.toString());
+        }   
+    }
+
+    class Student{
+        private String name;
+        private int age;
+    
+        Student (String name, int age){
+            this.name = name;
+            this.age = age;
+        }
+        
+        @Override
+        public String toString (){
+        return name + "is" + age;
+        }
+    }
+
+wówczas wyświetli się Max is 21. Nadpisywanie klas bez ich modyfikacji nie ma sensu.
