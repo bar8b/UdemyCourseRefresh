@@ -1,4 +1,4 @@
-package pojo_record;
+package _pojo_record;
 
 public class Main {
 
