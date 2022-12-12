@@ -401,7 +401,7 @@ Jest to relacja "całość – część" ( B "zawiera" A). Np. obiekty typu Poja
 Kompozycję uzyskujemy poprzez definiowanie w nowej klasie pól, które są obiektami istniejących klas. (klasa pod klasą)
 
 Stworzenie kilku klas w głównej klasie kolejnych klas jedna pod drugą sprawia, że możliwe jest dziedziczenie 
-po klasie głównej, ale przez to że są tam tez pozostałe klasy w subklasie będą również dostępne klasy zadeklarowane pod główną klasą:
+po klasie głównej, ale przez to, że są tam też pozostałe klasy w subklasie będą również dostępne klasy zadeklarowane pod główną klasą:
 przykład: 
 stworzona klasa Komputer a pod nią klasy monitor, płyta główna, RAM.
 Przy tworzeniu nowej klasy MójKomputer, wystarczy dodać "extends Komputer" aby mieć dostęp do klas monitor, płyta główna, RAM.
