@@ -1,4 +1,4 @@
-package c_polymorphism.ex5_car;
+package c_polymorphism.ex5_carMyInvention;
 
 import java.util.Scanner;
 
