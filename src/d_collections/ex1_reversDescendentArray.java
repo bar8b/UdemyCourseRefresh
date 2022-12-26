@@ -1,4 +1,4 @@
-package d_arrays;
+package d_collections;
 
 
 import java.util.Arrays;
