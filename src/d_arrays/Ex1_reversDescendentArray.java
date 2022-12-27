@@ -1,10 +1,10 @@
-package d_collections;
+package d_arrays;
 
 
 import java.util.Arrays;
 import java.util.Random;
 
-public class ex1_reversDescendentArray {
+public class Ex1_reversDescendentArray {
 
     public static void main(String[] args) {
 

@@ -1,8 +1,8 @@
-package d_collections;
+package d_arrays;
 
 import java.util.*;
 
-public class ex2_arrayList {
+public class Ex2_arrayList {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

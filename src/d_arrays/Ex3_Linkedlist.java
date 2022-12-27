@@ -1,4 +1,4 @@
-package d_collections;
+package d_arrays;
 
 import java.util.*;
 
@@ -9,7 +9,7 @@ record Place(String name, int distance) {
     }
 }
 
-public class ex3_Linkedlist {
+public class Ex3_Linkedlist {
 
     public static void main(String[] args) {
         LinkedList<Place> placeToVisit = new LinkedList<>();
