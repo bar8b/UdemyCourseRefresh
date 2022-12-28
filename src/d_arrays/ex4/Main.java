@@ -42,9 +42,9 @@ public class Main {
                     System.out.println(menu);
                     break;
                 case "T":
-                    Bank bank = selectBank();
-                    String name = bank.getCustomer().name();
-                    bank.makeTransaction(name);
+                    Bank bank1 = selectBank();
+                    String name = bank1.getCustomer().name();
+                    bank1.makeTransaction(name);
                     break;
                 case "U":
                     Bank bank2 = selectBank();

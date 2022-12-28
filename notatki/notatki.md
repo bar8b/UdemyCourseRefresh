@@ -414,3 +414,22 @@ Przy tworzeniu nowej klasy MójKomputer, wystarczy dodać "extends Komputer" aby
 ![](ArrayvsAraayList2.jpg)
 ![](ArrayvsAraayList1.jpg)
 ![](ArrayvsAraayList.jpg)
+
+# 18 Enum
+
+Typ wyliczeniowy, który umożliwia zadeklarowanie ograniczonej liczby możliwości wartości
+
+    public enum Topping {
+
+        MUSTARD, PICKLES, BACON, CHEDDAR, TOMATO;
+
+        public double getPrice() {
+            return switch (this) {
+                case BACON -> 1.5;
+                case CHEDDAR -> 1.0;
+                default -> 0.0;
+            };
+        }
+    }
+
+Można w enumach tworzyć konstruktory, metody i pola.
