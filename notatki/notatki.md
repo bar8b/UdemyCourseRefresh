@@ -1,5 +1,5 @@
 # 1. Operatory
-## 1.1 **==** **=**  **equals**.
+## 1.1 == =  equals.
 
 - dla zmiennych liczbowych
 int linia = 50;
@@ -396,18 +396,16 @@ pola w obiektach typu obiektowego w niniejszej klasie. Aby to zostało zrobione 
 
 # 16 Kompozycja a dziedziczenie
 
-Z koncepcyjnego punktu widzenia kompozycja oznacza, że "obiekt jest zawarty w innym obiekcie" . 
+Kompozycja oznacza, że "obiekt jest zawarty w innym obiekcie". 
 Jest to relacja "całość – część" ( B "zawiera" A). Np. obiekty typu Pojazd zawierają obiekty typu Rozmiar, Koła, Silnik itd..
-Kompozycję uzyskujemy poprzez definiowanie w nowej klasie pól, które są obiektami istniejących klas. (klasa pod klasą)
+Kompozycję uzyskujemy poprzez definiowanie w klasie (np Pojazd )pól, które są obiektami istniejących klas (np. Koła, Rozmiar, Silnik).
 
-Stworzenie kilku klas w głównej klasie kolejnych klas jedna pod drugą sprawia, że możliwe jest dziedziczenie 
-po klasie głównej, ale przez to, że są tam też pozostałe klasy w subklasie będą również dostępne klasy zadeklarowane pod główną klasą:
-przykład: 
-stworzona klasa Komputer a pod nią klasy monitor, płyta główna, RAM.
-Przy tworzeniu nowej klasy MójKomputer, wystarczy dodać "extends Komputer" aby mieć dostęp do klas monitor, płyta główna, RAM.
+Aby klasa dziedziczyła po klasie, należy przy deklaracji subklasy dodać "extends ... klasa nadrzędna".
+Wówczas klasa podrzędna nabiera "umiejętności i cechy" wszystkich klas nadrzędnych.
+Można dziedziczyć tylko z jednej klasy.
 
-- kompozycja - wiele klas - działa na zasadzie "B HAS A"
-- dziedziczenie - działa na zasadzie "B IS A".
+- kompozycja - działa na zasadzie "B HAS A"
+- dziedziczenie - działa na zasadzie "B IS A"
 
 # 17 Array vs ArrayList 
 
@@ -450,6 +448,17 @@ np interface Zwierze:
 
 dla klas Pies i Ryba implementacja będzie zupełnie inna, pomimo że oba typy mają te same zdolności
 
+Jeżeli zostanie stworzony interfejs np "Interfejs" i w innej klasie w
+metodzie użyty zostanie taki zapis:
+
+    public static void method (Interfejs interfejs){
+    //linijka kodu
+    }
+
+to znaczy -> (Interfejs interfejs), że w tej metodzie mogą być uzyte tylko te obiekty,
+które są instancją klasy implementującej dany interfejs.
+
+
 # 20 Big O Notation
 Notacja dużego o mówi nam nie ile czasu zajmie pewna operacja, 
 ale jak ten czas się zmienia w zależności od ilości danych, na których pracujemy.
@@ -467,3 +476,19 @@ dla każdej jednej liczby będzie to określona, stała liczba operacji (ponowni
 3 operacje czy 50, ważne, że jest to stała ilość). Dlatego algorytm ten ma złożoność obliczeniową O(n).
 
 ![](BigONotation.jpg)
+
+
+
+
+
+
+
+
+
+# ***Pytania do zadania komuś mądremu!***
+1. Jak działa HashMap?
+2. W jaki sposób odwoływać się do obiektów bez referencji?
+3. Czy jeżeli stworzę pętlę, która tworzy obiekty i nie stworze listy gdzie będą one zapisywane, 
+to co się stanie z obiektami i jak je potem wywołać?
+4. Po co tworzy się referencje do obiektu innego typu niż typ obiektu.
+5. Po co definiuje się typ zmiennej referencji obiektu?

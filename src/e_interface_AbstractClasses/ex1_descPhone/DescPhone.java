@@ -1,4 +1,4 @@
-package e_interface_AbstractClasses;
+package e_interface_AbstractClasses.ex1_descPhone;
 
 public class DescPhone implements ITelephone {
 
