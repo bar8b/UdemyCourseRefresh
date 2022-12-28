@@ -22,7 +22,7 @@ package c_polymorphism.ex7_car;
 //        accelerate, and brake. The return messages for these methods should somewhere contain the name of the class to which the methods belong.
 //
 //        Notes:
-//        Remember that your Main class is not included in the code evaluation.
+//        Remember that your DescPhone class is not included in the code evaluation.
 //        You should paste the code from each of your classes into the respective class file in the code evaluator.
 
 public class Car {

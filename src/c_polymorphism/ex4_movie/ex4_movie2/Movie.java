@@ -1,4 +1,4 @@
-package c_polymorphism.ex4_movie2;
+package c_polymorphism.ex4_movie.ex4_movie2;
 
 public class Movie {
 

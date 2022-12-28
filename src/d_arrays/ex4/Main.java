@@ -2,6 +2,12 @@ package d_arrays.ex4;
 
 import java.util.*;
 
+
+// TODO:
+// add new customer
+// transactions
+// input exeptions
+
 public class Main {
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Bank> listOfBanks = new ArrayList();
@@ -29,26 +35,25 @@ public class Main {
                     break;
                 case "C":
                     if (!listOfBanks.isEmpty()) {
-                        Bank bank = selectBank();
-                        bank.addNewCustomer();
+                        selectBank().addNewCustomer();
                     } else {
                         createBank(listOfBanks);
-                        Bank bank = selectBank();
-                        bank.addNewCustomer();
+                        selectBank().addNewCustomer();
                     }
-
                     break;
                 case "M":
                     System.out.println(menu);
                     break;
                 case "T":
-                    Bank bank1 = selectBank();
-                    String name = bank1.getCustomer().name();
-                    bank1.makeTransaction(name);
+                    Bank bank = selectBank();
+                    String name = bank.getCustomer().name();
+                    bank.makeTransaction(name);
                     break;
                 case "U":
-                    Bank bank2 = selectBank();
-                    System.out.println(bank2.getListOfCustomers());
+                    System.out.println(selectBank().getListOfCustomers());
+                    break;
+                case "S":
+                    selectBank();
                     break;
                 case "Q":
                     loop = false;
@@ -74,11 +79,14 @@ public class Main {
         if (listOfBanks.isEmpty()) {
             createBank(listOfBanks);
         }
-        System.out.println("Select Bank?");
-        System.out.println(listOfBanks);
-        Bank bank = new Bank(sc.next().toUpperCase());
-        int index = listOfBanks.indexOf(bank);
-        return listOfBanks.get(index + 1);
+        for (int i = 1 ; i <= listOfBanks.size(); i++){
+            listOfBanks.get(i-1).getName();
+            System.out.println(i + " - " + listOfBanks.get(i-1).getName());
+        }
+        System.out.println("Select Bank by number.");
+        int index = sc.nextInt();
+        listOfBanks.get(index -1);
+        return listOfBanks.get(index - 1);
     }
 
 

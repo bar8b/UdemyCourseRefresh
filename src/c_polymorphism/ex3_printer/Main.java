@@ -34,7 +34,7 @@ package c_polymorphism.ex3_printer;
 //        Pages printed was 1 new total print count for printer = 3
 
 //        Tips:
-//        Remember to only paste the code from Printer class into the exercise evaluator. The Main class does not
+//        Remember to only paste the code from Printer class into the exercise evaluator. The DescPhone class does not
 //        need to be pasted in.
 //        You can include a message in the printPages method which informs the user that the printer is printing in
 //        duplex mode if duplex is equal to "true" if you want.

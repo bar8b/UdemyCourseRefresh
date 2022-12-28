@@ -13,16 +13,16 @@ public class Bank {
     }
 
     public void addNewCustomer() {
-        System.out.println("What is the name of a new Customer?");
+        System.out.println("What is the name of a new Customer and what is entered deposit? Split with ','");
         Scanner sc = new Scanner(System.in);
-        String name = sc.next();
-        System.out.println("What is the entered deposit?");
-        double deposit = sc.nextDouble();
-        if (!listOfCustomers.contains(name)) {
-            Customer customer = new Customer(name, deposit);
+        String [] answer = sc.next().split(",");
+        String name = answer[0];
+        int deposit = Integer.parseInt(answer[1]);
+        Customer customer = new Customer(name, deposit);
+        if (iterationCustomerList(name) != null) {
             listOfCustomers.add(customer);
-            System.out.println("New Customer added: " + customer);
-        } else {
+            System.out.println("New Customer added into the " + getName() + " bank -> " + customer );
+        } else if (listOfCustomers.contains(customer)){
             System.out.println("Customer is already existing");
         }
     }
@@ -32,17 +32,22 @@ public class Bank {
     }
 
     public Customer getCustomer() {
-        System.out.println("For whom would you like to do a transaction?");
-        getListOfCustomers();
+        System.out.println("Choose a Customer?");
+        System.out.println(getListOfCustomers());
         Scanner sc = new Scanner(System.in);
         String name = sc.next().toUpperCase();
+        if (iterationCustomerList(name) == null){
+            System.out.printf("Customer (%s) wasn't found %n", name);
+        }
+        return iterationCustomerList(name);
+    }
+
+    public Customer iterationCustomerList(String name){
         for (var customer : listOfCustomers) {
             if (customer.name().equalsIgnoreCase(name)) {
                 return customer;
             }
         }
-        System.out.printf("Customer (%s) wasn't found %n", name);
-
         return null;
     }
 

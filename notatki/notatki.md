@@ -418,6 +418,7 @@ Przy tworzeniu nowej klasy MójKomputer, wystarczy dodać "extends Komputer" aby
 # 18 Enum
 
 Typ wyliczeniowy, który umożliwia zadeklarowanie ograniczonej liczby możliwości wartości
+Immutable
 
     public enum Topping {
 
@@ -433,3 +434,36 @@ Typ wyliczeniowy, który umożliwia zadeklarowanie ograniczonej liczby możliwo�
     }
 
 Można w enumach tworzyć konstruktory, metody i pola.
+
+# 19 Interfejsy
+
+Jest to zbiór metod i pól, które musi implementować dana klasa.
+Trzeba podczytać wszystkie metody do klasy w której implementowany jest interface.
+Metody zadeklarowane w interfejsach są abstrakcyjne - nie ma definicji.
+Interfejsy dają możliwość utworzenia zbioru cech które musi posiadać dany element,
+ale ich realizaję można zastosować w różny sposób np: 
+np interface Zwierze:
+
+        public void ruszaSie();
+        public void wydajeDźwięki();
+        public void oddycha();
+
+dla klas Pies i Ryba implementacja będzie zupełnie inna, pomimo że oba typy mają te same zdolności
+
+# 20 Big O Notation
+Notacja dużego o mówi nam nie ile czasu zajmie pewna operacja, 
+ale jak ten czas się zmienia w zależności od ilości danych, na których pracujemy.
+
+Przykład
+Weźmy dla przykładu algorytm, który losuje liczbę z przedziału (a, b). Dla uproszczenia pomyślmy o tym jako o człowieku,
+który z worka wszystkich możliwych liczb z tego przedziału wybiera jedną. Czy czas potrzebny na wybranie tej liczby 
+zmieni się w zależności od tego czy w worku będzie 5, 50 czy 500000 liczb? Nie! Oznacza to, że algorytm ten działa
+w czasie stałym, który oznaczamy jako O(1). A dlaczego O(1) a nie np. O(3) ? Ponieważ interesuje nas jedynie sposób,
+w jaki ten czas rośnie, a nie sam czas. Jeśli jest stały, używamy po prostu jednostki, aby pokazać, że się nie zmienia.
+
+Jako drugi przykład weźmy algorytm, który dla każdej liczby od zera do x wypisuje ją na konsoli. W zależności 
+od wejścia (x w tym wypadku) nasz algorytm będzie musiał wykonać różną ilość operacji — w tym wypadku
+dla każdej jednej liczby będzie to określona, stała liczba operacji (ponownie, nie ma znaczenia, czy będą to 
+3 operacje czy 50, ważne, że jest to stała ilość). Dlatego algorytm ten ma złożoność obliczeniową O(n).
+
+![](BigONotation.jpg)
