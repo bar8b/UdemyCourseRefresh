@@ -11,7 +11,7 @@ public class Movie {
     public void watchMovie() {
 
         String instanceType = this.getClass().getSimpleName();
-        System.out.println(title + " is a " + instanceType + " film");
+        System.out.println(title + " is _brudnopis.a.a " + instanceType + " film");
     }
 
     public static Movie getMovie(String type, String title) {

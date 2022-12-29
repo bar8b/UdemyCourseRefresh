@@ -2,8 +2,8 @@ package a_basics_oneToSix;
 
 public class Ex7_numberFromRange {
 
-//    We'll say that a number is "teen" if it is in the range 13 -19 (inclusive).
-//    Write a method named hasTeen with 3 parameters of type int.
+//    We'll say that _brudnopis.a.a number is "teen" if it is in the range 13 -19 (inclusive).
+//    Write _brudnopis.a.a method named hasTeen with 3 parameters of type int.
 //    The method should return boolean and it needs to return true if one of the parameters is in range 13(inclusive) - 19 (inclusive). Otherwise return false.
 //
 //    EXAMPLES OF INPUT/OUTPUT:
@@ -17,7 +17,7 @@ public class Ex7_numberFromRange {
 //            * isTeen(9);  should return false since 9 is in not range 13 - 19
 //            * isTeen(13);  should return true since 13 is in range 13 - 19
 //    NOTE: All methods need to be defined as public static like we have been doing so far in the course.
-//    NOTE: Do not add a  main method to solution code.
+//    NOTE: Do not add _brudnopis.a.a  main method to solution code.
 
     public static void main(String[] args) {
         System.out.println(hasTeen(9, 99, 19));

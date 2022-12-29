@@ -1,8 +1,8 @@
 package a_basics_oneToSix;
 
-//        Write a method named printSquareStar with one parameter of type int named number.
+//        Write _brudnopis.a.a method named printSquareStar with one parameter of type int named number.
 //        If number is < 5, the method should print "Invalid Value".
-//        The method should print diagonals to generate a rectangular pattern composed of stars (*). This should be accomplished by using loops (see examples below).
+//        The method should print diagonals to generate _brudnopis.a.a rectangular pattern composed of stars (*). This should be accomplished by using loops (see examples below).
 //        EXAMPLE INPUT/OUTPUT:
 //        EXAMPLE 1
 //        printSquareStar(5); should print the following:
@@ -28,17 +28,17 @@ package a_basics_oneToSix;
 //        * *  * *
 //        **    **
 //        ********
-//        The patterns above consist of a number of rows and columns (where number is the number of rows to print). For each row or column, stars are printed based on four conditions (Read them carefully):
+//        The patterns above consist of _brudnopis.a.a number of rows and columns (where number is the number of rows to print). For each row or column, stars are printed based on four conditions (Read them carefully):
 //        * In the first or last row
 //        * In the first or last column
 //        * When the row number equals the column number
 //        * When the column number equals rowCount - currentRow + 1 (where currentRow is current row number)
 //
-//        HINT: Use a nested loop (a loop inside of a loop).
-//        HINT: To print on the same line, use the print method instead of println, e.g. System.out.print(" "); prints a space and does not "move" to another line.
+//        HINT: Use _brudnopis.a.a nested loop (_brudnopis.a.a loop inside of _brudnopis.a.a loop).
+//        HINT: To print on the same line, use the print method instead of println, e.g. System.out.print(" "); prints _brudnopis.a.a space and does not "move" to another line.
 //        HINT: To "move" to another line, you can use an empty println call, e.g. System.out.println(); .
 //        NOTE: The method printSquareStar should be defined as public static like we have been doing so far in the course.
-//        NOTE: Do not add a main method to the solution code.
+//        NOTE: Do not add _brudnopis.a.a main method to the solution code.
 
 public class Ex28_printSquareStar {
     public static void main(String[] args) {

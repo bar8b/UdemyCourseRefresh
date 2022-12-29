@@ -13,7 +13,7 @@ public class Bank {
     }
 
     public void addNewCustomer() {
-        System.out.println("What is the name of a new Customer and what is entered deposit? Split with ','");
+        System.out.println("What is the name of _brudnopis.a.a new Customer and what is entered deposit? Split with ','");
         Scanner sc = new Scanner(System.in);
         String [] answer = sc.next().split(",");
         String name = answer[0];
@@ -32,7 +32,7 @@ public class Bank {
     }
 
     public Customer getCustomer() {
-        System.out.println("Choose a Customer?");
+        System.out.println("Choose _brudnopis.a.a Customer?");
         System.out.println(getListOfCustomers());
         Scanner sc = new Scanner(System.in);
         String name = sc.next().toUpperCase();

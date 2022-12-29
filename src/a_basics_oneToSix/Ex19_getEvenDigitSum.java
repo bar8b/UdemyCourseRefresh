@@ -1,6 +1,6 @@
 package a_basics_oneToSix;
 
-//        Write a method named getEvenDigitSum with one parameter of type int called number.
+//        Write _brudnopis.a.a method named getEvenDigitSum with one parameter of type int called number.
 //        The method should return the sum of the even digits within the number.
 //        If the number is negative, the method should return -1 to indicate an invalid value.
 //
@@ -10,7 +10,7 @@ package a_basics_oneToSix;
 //        * getEvenDigitSum(-22); → should return -1 since the number is negative
 //
 //        NOTE: The method getEvenDigitSum should be defined as public static like we have been doing so far in the course.
-//        NOTE: Do not add a main method to the solution code.
+//        NOTE: Do not add _brudnopis.a.a main method to the solution code.
 
 public class Ex19_getEvenDigitSum {
     public static void main(String[] args) {

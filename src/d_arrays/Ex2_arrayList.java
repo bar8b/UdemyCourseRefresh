@@ -14,7 +14,7 @@ public class Ex2_arrayList {
                     "0 - to shut down%n " +
                     "1 - to add item(s) to list comma delimited liest %n " +
                     "2 - to remove any items (comma delimited list)%n" +
-                    "Enter a number for witch action you want to do:");
+                    "Enter _brudnopis.a.a number for witch action you want to do:");
             action = sc.nextInt();
 
             switch (action) {

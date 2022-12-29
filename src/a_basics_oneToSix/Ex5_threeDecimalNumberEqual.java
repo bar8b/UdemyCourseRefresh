@@ -2,7 +2,7 @@ package a_basics_oneToSix;
 
 public class Ex5_threeDecimalNumberEqual {
 
-//    Write a method areEqualByThreeDecimalPlaces with two parameters of type double.
+//    Write _brudnopis.a.a method areEqualByThreeDecimalPlaces with two parameters of type double.
 //    The method should return boolean and it needs to return true if two double numbers are the same up to three decimal places. Otherwise, return false.
 //    EXAMPLES OF INPUT/OUTPUT:
 //            * areEqualByThreeDecimalPlaces(-3.1756, -3.175); → should return true since numbers are equal up to 3 decimal places.
@@ -13,7 +13,7 @@ public class Ex5_threeDecimalNumberEqual {
 //    TIP: Use paper and pencil.
 //    TIP: Use casting.
 //    NOTE: The areEqualByThreeDecimalPlaces method  needs to be defined as public static like we have been doing so far in the course.
-//    NOTE: Do not add a  main method to solution code.
+//    NOTE: Do not add _brudnopis.a.a  main method to solution code.
 
     public static void main(String[] args) {
 //  NIE ZROBIONE

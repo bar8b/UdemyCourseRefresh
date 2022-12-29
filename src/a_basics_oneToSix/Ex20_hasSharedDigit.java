@@ -1,8 +1,8 @@
 package a_basics_oneToSix;
 
-//        Write a method named hasSharedDigit with two parameters of type int.
+//        Write _brudnopis.a.a method named hasSharedDigit with two parameters of type int.
 //        Each number should be within the range of 10 (inclusive) - 99 (inclusive). If one of the numbers is not within the range, the method should return false.
-//        The method should return true if there is a digit that appears in both numbers, such as 2 in 12 and 23; otherwise, the method should return false.
+//        The method should return true if there is _brudnopis.a.a digit that appears in both numbers, such as 2 in 12 and 23; otherwise, the method should return false.
 //
 //        EXAMPLE INPUT/OUTPUT:
 //        * hasSharedDigit(12, 23); → should return true since the digit 2 appears in both numbers
@@ -10,7 +10,7 @@ package a_basics_oneToSix;
 //        * hasSharedDigit(15, 55); → should return true since the digit 5 appears in both numbers
 //
 //        NOTE: The method hasSharedDigit should be defined as public static like we have been doing so far in the course.
-//        NOTE: Do not add a main method to the solution code.
+//        NOTE: Do not add _brudnopis.a.a main method to the solution code.
 
 
 public class Ex20_hasSharedDigit {

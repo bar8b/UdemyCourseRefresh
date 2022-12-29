@@ -20,12 +20,12 @@ public class Car {
 
     public void emission() {
         String carName = this.getClass().getSimpleName();
-        System.out.printf("This %s is a %s and it emits an carbon dioxide %n", description, carName);
+        System.out.printf("This %s is _brudnopis.a.a %s and it emits an carbon dioxide %n", description, carName);
     }
 
     public String driverExperience() {
         Scanner s = new Scanner(System.in);
-        System.out.println("how many years do you actively drive a car?");
+        System.out.println("how many years do you actively drive _brudnopis.a.a car?");
         return (s.nextInt() >= 5) ? "experienced" : "not experienced";
     }
 
@@ -59,7 +59,7 @@ class GasPoweredCar extends Car {
         if (cylinders == 2 || cylinders == 3 || cylinders == 4) {
             System.out.printf("The engine in this car has %d%n", cylinders);
         } else {
-            System.out.println("It's not a car, it's fucking transformer");
+            System.out.println("It's not _brudnopis.a.a car, it's fucking transformer");
         }
     }
 
@@ -94,7 +94,7 @@ class ElectricCar extends Car {
     @Override
     public void emission() {
         super.emission();
-        System.out.println("The emitted carbon dioxide in majority amount comes from an production of a car");
+        System.out.println("The emitted carbon dioxide in majority amount comes from an production of _brudnopis.a.a car");
 
     }
 
@@ -109,7 +109,7 @@ class HybridCar extends Car {
     @Override
     public void emission() {
         super.emission();
-        System.out.println("The emitted carbon dioxide comes from an production of a car and from engine");
+        System.out.println("The emitted carbon dioxide comes from an production of _brudnopis.a.a car and from engine");
 
     }
 

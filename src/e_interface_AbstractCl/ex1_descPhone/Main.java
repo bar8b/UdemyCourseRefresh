@@ -1,4 +1,4 @@
-package e_interface_AbstractClasses.ex1_descPhone;
+package e_interface_AbstractCl.ex1_descPhone;
 
 public class Main {
     public static void main(String[] args) {

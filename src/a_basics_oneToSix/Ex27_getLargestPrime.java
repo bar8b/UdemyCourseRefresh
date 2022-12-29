@@ -1,9 +1,9 @@
 package a_basics_oneToSix;
 
-//        Write a method named getLargestPrime with one parameter of type int named number.
+//        Write _brudnopis.a.a method named getLargestPrime with one parameter of type int named number.
 //        If the number is negative or does not have any prime numbers, the method should return -1 to indicate an invalid value.
 //
-//        The method should calculate the largest prime factor of a given number and return it.
+//        The method should calculate the largest prime factor of _brudnopis.a.a given number and return it.
 //
 //        EXAMPLE INPUT/OUTPUT:
 //        * getLargestPrime (21); should return 7 since 7 is the largest prime (3 * 7 = 21)
@@ -14,7 +14,7 @@ package a_basics_oneToSix;
 //
 //        HINT: Since the numbers 0 and 1 are not considered prime numbers, they cannot contain prime numbers.
 //        NOTE: The method getLargestPrime should be defined as public static like we have been doing so far in the course.
-//        NOTE: Do not add a main method to the solution code.
+//        NOTE: Do not add _brudnopis.a.a main method to the solution code.
 
 public class Ex27_getLargestPrime {
 

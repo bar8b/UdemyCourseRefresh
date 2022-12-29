@@ -1,4 +1,4 @@
-package e_interface_AbstractClasses.ex2_playerMonster;
+package e_interface_AbstractCl.ex2_playerMonster;
 
 import java.util.ArrayList;
 

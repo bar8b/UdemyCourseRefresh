@@ -11,7 +11,7 @@ public class Movie {
     public void watchMovie() {
 
         String instanceType = this.getClass().getSimpleName();
-        System.out.println(title + " is a " + instanceType + " film");
+        System.out.println(title + " is _brudnopis.a.a " + instanceType + " film");
     }
 
     public static Movie getMovie(String type, String title) {
@@ -61,7 +61,7 @@ class Comedy extends Movie {
     }
 
     public void watchComedy() {
-        System.out.println("Watching a Comedy!");
+        System.out.println("Watching _brudnopis.a.a Comedy!");
     }
 }
 
@@ -81,6 +81,6 @@ class ScienceFiction extends Movie {
     }
 
     public void watchScienceFiction() {
-        System.out.println("Watching a Science Fiction Thriller!");
+        System.out.println("Watching _brudnopis.a.a Science Fiction Thriller!");
     }
 }

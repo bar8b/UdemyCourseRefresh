@@ -11,9 +11,9 @@ package c_polymorphism.ex7_car;
 //        four wheels. So the other two fields should be set to default values.
 //        In addition, there are five other methods These methods should be defined as described below:
 
-//          startEngine accepts no parameters and returns a message which says that the car's engine is starting.
-//          accelerate accepts no parameters and returns a message that says the car is accelerating.
-//          brake accepts no parameters and returns a message stating the car is braking.
+//          startEngine accepts no parameters and returns _brudnopis.a.a message which says that the car's engine is starting.
+//          accelerate accepts no parameters and returns _brudnopis.a.a message that says the car is accelerating.
+//          brake accepts no parameters and returns _brudnopis.a.a message stating the car is braking.
 //          The messages these methods return should somewhere contain the name of the class, Car.
 //          Two getter methods should also be defined here for the member variables cylinders and name. All methods have public access.
 

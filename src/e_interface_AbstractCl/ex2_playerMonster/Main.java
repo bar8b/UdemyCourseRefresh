@@ -1,4 +1,4 @@
-package e_interface_AbstractClasses.ex2_playerMonster;
+package e_interface_AbstractCl.ex2_playerMonster;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean quit = false;
         int index = 0;
-        System.out.println("Choose\n 1 to enter a string \n 0 to quit");
+        System.out.println("Choose\n 1 to enter _brudnopis.a.a string \n 0 to quit");
         while (!quit) {
             System.out.println("Coose an option: ");
             int choice = sc.nextInt();
@@ -40,7 +40,7 @@ public class Main {
                     quit = true;
                     break;
                 case 1:
-                    System.out.println("Enter a string: ");
+                    System.out.println("Enter _brudnopis.a.a string: ");
                     String stringInput = sc.nextLine();
                     values.add(index, stringInput);
                     index ++;

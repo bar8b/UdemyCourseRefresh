@@ -2,8 +2,8 @@ package a_basics_oneToSix;
 
 public class Ex18_sumFirstAndLastDigit {
 
-//    Write a method named sumFirstAndLastDigit with one parameter of type int called number.
-//    The method needs to find the first and the last digit of the parameter number passed to the method, using a loop and return the sum of the first and the last digit of that number.
+//    Write _brudnopis.a.a method named sumFirstAndLastDigit with one parameter of type int called number.
+//    The method needs to find the first and the last digit of the parameter number passed to the method, using _brudnopis.a.a loop and return the sum of the first and the last digit of that number.
 //    If the number is negative then the method needs to return -1 to indicate an invalid value.
 //    Example input/output
 //            * sumFirstAndLastDigit(252); → should return 4, the first digit is 2 and the last is 2 which gives us 2+2 and the sum is 4.
@@ -12,7 +12,7 @@ public class Ex18_sumFirstAndLastDigit {
 //            * sumFirstAndLastDigit(5); → should return 10, the first digit and the last digit is 5 since we only have 1 digit, which gives us 5+5 and the sum is 10.
 //            * sumFirstAndLastDigit(-10); → should return -1, since the parameter is negative and needs to be positive.
 //    NOTE: The method sumFirstAndLastDigit needs to be defined as public static like we have been doing so far in the course.
-//    NOTE: Do not add a  main method to solution code.
+//    NOTE: Do not add _brudnopis.a.a  main method to solution code.
 
     public static void main(String[] args) {
         System.out.println(sumFirstAndLastDigit(252));

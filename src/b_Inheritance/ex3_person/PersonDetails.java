@@ -1,6 +1,6 @@
 package b_Inheritance.ex3_person;
 
-//        Write a class with the name Person. The class needs three fields (instance variables) with the names firstName, lastName of type String and age of type int.
+//        Write _brudnopis.a.a class with the name Person. The class needs three fields (instance variables) with the names firstName, lastName of type String and age of type int.
 //        Write the following methods (instance methods):
 //        *Method named getFirstName without any parameters, it needs to return the value of the firstName field.
 //        *Method named getLastName without any parameters, it needs to return the value of the lastName field.

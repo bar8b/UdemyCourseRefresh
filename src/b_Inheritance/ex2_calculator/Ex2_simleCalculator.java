@@ -1,6 +1,6 @@
 package b_Inheritance.ex2_calculator;
 
-//        Write a class with the name SimpleCalculator. The class needs two fields (instance variables) with names firstNumber and secondNumber both of type double.
+//        Write _brudnopis.a.a class with the name SimpleCalculator. The class needs two fields (instance variables) with names firstNumber and secondNumber both of type double.
 //        Write the following methods (instance methods):
 //        *Method named getFirstNumber without any parameters, it needs to return the value of firstNumber field.
 //        *Method named getSecondNumber without any parameters, it needs to return the value of secondNumber field.

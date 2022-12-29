@@ -38,16 +38,16 @@ System.out.println("to się wykona niezależnie od pętli")
 
 # 3. Metody
 
-można nie podawać wartości a jeżeli to boolean. Jeżeli wartość a = true to wykona się return z:
+można nie podawać wartości _brudnopis.a.a jeżeli to boolean. Jeżeli wartość _brudnopis.a.a = true to wykona się return z:
 
-public static int calculate(int a, int b){
-    if(a){
+public static int calculate(int _brudnopis.a.a, int b){
+    if(_brudnopis.a.a){
         return z;
     }
     return y;
 }
 
-jeżeli a == true to metoda zakończy działanie na "return z". jeżlei a == false to wyświetli się "return y"
+jeżeli _brudnopis.a.a == true to metoda zakończy działanie na "return z". jeżlei _brudnopis.a.a == false to wyświetli się "return y"
 
 # 4. Overloading / Overridding
 
@@ -81,8 +81,8 @@ jeżeli a == true to metoda zakończy działanie na "return z". jeżlei a == fal
     case x:                             case x -> code for x;
         // code for x;                  case y -> code for y;
         break;                          case 1, 2, 3 -> {
-    case y:                                     System.out.println("Was a 3, a 4 or  a 5");
-        //code for y                            System.out.println("It was a" + value);
+    case y:                                     System.out.println("Was _brudnopis.a.a 3, _brudnopis.a.a 4 or  _brudnopis.a.a 5");
+        //code for y                            System.out.println("It was _brudnopis.a.a" + value);
         break;                          }
     case 1: case 2: case 3:             default -> code for resst;
         //code for three cases;         }
@@ -125,11 +125,11 @@ return "bad"; -> jeżeli chcemy zwrócić z metody
   
 # 7. Enkapsulacja
 - Zdolność chowania pól i metod przed publicznym dostępem - gettery i settery
-- Building of behavior and attributes on a single object
+- Building of behavior and attributes on _brudnopis.a.a single object
 
 # 8. słowo kluczowe STATIC
 
-- Static sprawia, że nadane pole będzie przypisane do klasy, a nie do danej instacji (obiektu) tej klasy.
+- Static sprawia, że nadane pole będzie przypisane do klasy, _brudnopis.a.a nie do danej instacji (obiektu) tej klasy.
 sprawia, że coś jest wspólne dla wszystkich obektów tej klasy.
 - jeżeli zmieni się parametr static, w jednej instancji, to zmieni się on również w pozostałych.
 
@@ -140,7 +140,7 @@ wartość pola statycznego.
   - Pola Statyczne:
 
       Pola statyczne różnią się od pól instancji (obiektów) tym, że są one współdzielone 
-  przez wszystkie obiekty tej klasy, tzn. przynależą one do całej klasy, a nie konkretnie utworzonego obiektu.
+  przez wszystkie obiekty tej klasy, tzn. przynależą one do całej klasy, _brudnopis.a.a nie konkretnie utworzonego obiektu.
   używane najczęściej do przechowywania "counters", stałych jak np PI, tworzenia i kontrolowania
   dostępu do źródeł.
 
@@ -186,8 +186,8 @@ wartość pola statycznego.
   liczby i wyjście, czyli wynik sumowania.
 
           class Calc {
-             static int sum(int a, int b) {
-                return a + b;
+             static int sum(int _brudnopis.a.a, int b) {
+                return _brudnopis.a.a + b;
              }
           }
 Dzięki temu, że metoda jest statyczna, to w celu jej wywołania, nie musimy tworzyć obiektu:
@@ -251,7 +251,7 @@ Poprzez zadeklarowanie pól w nawiasach, Records sam tworzy ciało, ale nie poka
 - metody dające dostęp do danych, w nazwie nie ma getName wystarczy name  
 - metodę toString().
 
-Różnica między POJO a Record:
+Różnica między POJO _brudnopis.a.a Record:
 - recordów nie da się modyfikować - są immutable.
 
 # 11. super() / super / this / this()
@@ -307,9 +307,9 @@ jedna klasa sprawia ze obiekty tej klasy moga mieć różne postacie.
         }
     }
 
-When an instance is created, it's assigned  a hashCode, and that hashCode is what can
-tell us if our multiple references,  are pointing to a single instance.
-It's a mechanism for comparison, in other words. This really is like an address for a house,
+When an instance is created, it's assigned  _brudnopis.a.a hashCode, and that hashCode is what can
+tell us if our multiple references,  are pointing to _brudnopis.a.a single instance.
+It's _brudnopis.a.a mechanism for comparison, in other words. This really is like an address for _brudnopis.a.a house,
 which we talked about in our  examples, to explain the difference
 between references and objects or instances. Anyway, this isn't what we want printed out,  
 we really want to print out the  name and age of our student. 
@@ -394,7 +394,7 @@ pola w obiektach typu obiektowego w niniejszej klasie. Aby to zostało zrobione 
   - System.out.printf("Age = %d, Birth year = %d", age, yearOfBirth); <- działa to też tak
   - formattedString = "Your age is %d".formatted(age); <- działa to też tak
 
-# 16 Kompozycja a dziedziczenie
+# 16 Kompozycja _brudnopis.a.a dziedziczenie
 
 Kompozycja oznacza, że "obiekt jest zawarty w innym obiekcie". 
 Jest to relacja "całość – część" ( B "zawiera" A). Np. obiekty typu Pojazd zawierają obiekty typu Rozmiar, Koła, Silnik itd..
@@ -458,17 +458,38 @@ metodzie użyty zostanie taki zapis:
 to znaczy -> (Interfejs interfejs), że w tej metodzie mogą być uzyte tylko te obiekty,
 które są instancją klasy implementującej dany interfejs.
 
+Interfejsy mogą dziedziczyć po innych interfejsacvh, wówczas interfejs dziedziczący zawiera wszystkie metody z tych interfejsów.
+Dziedziczenie oznaczane jest słowem kluczowym extends. 
+
+## 1. Moc Interfejsów!!!
+
+Dzięki zastosowaniu interfejsu w wielu klasach, później można np przeiterować po każdej z klas wywołując metody,
+które są w nich zawarte: (Stworzony interfejs Informacje oraz klasy i obiekty tych klas robot i czałowie)
+
+    Informacje informacje = new Informacje [] {robot , czlowiek};
+    for (Informacje i : informacje){
+        i.pokazInformacje();
+    }
+metoda pokażInformacje zostanie wykonana dla obu obiektów implementujących interfejs Informacje.
+
+## 2. Moc Interfejsów!!!
+Jeżeli stworzę metodę któa implementuje zmienną typu Interfejsu, wówczas z tej metody może skorzystać każdy obiekt klasy,
+która implementuje interfejs.
+
+    public static void metoda (Interfejs interfejs){}
+
+
 
 # 20 Big O Notation
 Notacja dużego o mówi nam nie ile czasu zajmie pewna operacja, 
 ale jak ten czas się zmienia w zależności od ilości danych, na których pracujemy.
 
 Przykład
-Weźmy dla przykładu algorytm, który losuje liczbę z przedziału (a, b). Dla uproszczenia pomyślmy o tym jako o człowieku,
+Weźmy dla przykładu algorytm, który losuje liczbę z przedziału (_brudnopis.a.a, b). Dla uproszczenia pomyślmy o tym jako o człowieku,
 który z worka wszystkich możliwych liczb z tego przedziału wybiera jedną. Czy czas potrzebny na wybranie tej liczby 
 zmieni się w zależności od tego czy w worku będzie 5, 50 czy 500000 liczb? Nie! Oznacza to, że algorytm ten działa
-w czasie stałym, który oznaczamy jako O(1). A dlaczego O(1) a nie np. O(3) ? Ponieważ interesuje nas jedynie sposób,
-w jaki ten czas rośnie, a nie sam czas. Jeśli jest stały, używamy po prostu jednostki, aby pokazać, że się nie zmienia.
+w czasie stałym, który oznaczamy jako O(1). A dlaczego O(1) _brudnopis.a.a nie np. O(3) ? Ponieważ interesuje nas jedynie sposób,
+w jaki ten czas rośnie, _brudnopis.a.a nie sam czas. Jeśli jest stały, używamy po prostu jednostki, aby pokazać, że się nie zmienia.
 
 Jako drugi przykład weźmy algorytm, który dla każdej liczby od zera do x wypisuje ją na konsoli. W zależności 
 od wejścia (x w tym wypadku) nasz algorytm będzie musiał wykonać różną ilość operacji — w tym wypadku
@@ -477,12 +498,151 @@ dla każdej jednej liczby będzie to określona, stała liczba operacji (ponowni
 
 ![](BigONotation.jpg)
 
+# 21 Klasy zagnieżdżone-wewnętrzne -> Inner classes (nested)
 
+Dobrym pomysłem użycia klas wewnętrznych jest sytuacja, w której klasa wewnętrzna nie ma sensu bez
+klasy zewnętrznej i jest z nią ściśle związana np karta sieciowa-komputer.
 
+Stosowanie klas wewnętrznych to lepsza enkapsulacja kodu (ukrywanie szczegółów działania klasy wewnątrz). 
+Dzięki temu, że klasy wewnętrzne mają dostęp nawet do prywatnych zasobów klas otaczających, te drugie 
+możemy bardziej „opakować”. Ukryć więcej szczegółów wewnątrz.
 
+## Klasy zagnieżdżone statyczne
+Klasy zagnieżdżone statyczne mają dostęp jedynie do statycznych pól klasy zewnętrznej.
 
+    public class OuterClass2 {
+        public static class InnerClass2 {
+        }
+    
+        private InnerClass2 instantiate() {
+            return new InnerClass2();
+        }   
+    }
 
+Tworzenie instancji klasy wew:
 
+    private static void staticInnerClassInstantiation() {
+        OuterClass2 outerClass = new OuterClass2();
+        OuterClass2.InnerClass2 instance1 = outerClass.instantiate();
+        OuterClass2.InnerClass2 instance2 = new OuterClass2.InnerClass2();      //tu jest różnica!!!
+    }
+
+## Klasy zagnieżdżone niestatyczne 
+Tworząc klasę wewnętrzną, do naszej dyspozycji są zarówno jej własne pola, jak i pola klasy zewnętrznej,
+nawet jeśli są prywatne i nie posiadają metody dostępowej (działa to także w drugą stronę – z klasy zewnętrznej 
+można sięgać do pól klasy wewnętrznej)
+
+### Klasy wewnętrzne - "normalne"
+
+    public class OuterClass {
+        private String message = "Hello from outer class!";
+        public class InnerClass {
+            public void printMessage(){
+            System.out.println(message);           
+            }
+        }
+    
+        public InnerClass instantiate() {
+            return new InnerClass();
+        }
+    }
+
+Tworzenie instancji klasy wew:
+
+    private static void innerClassInstantiation() {
+        OuterClass outerClass = new OuterClass();
+        OuterClass.InnerClass instance1 = outerClass.instantiate();
+        OuterClass.InnerClass instance2 = outerClass.new InnerClass();
+lub po prostu:
+
+        OuterClass.InnerClass innerClass = new outerClass.new InnerClass();
+        innerClass.InnerClass();
+    }
+
+Klasy wewnętrzne zawierać mogą pola o takich samych nazwach, jak pola klasy zewnętrznej.
+Rozwiązaniem problemu powielających się nazw może być użycie słowa this, które w przypadku
+odwołania się do pola klasy zewnętrznej, należy poprzedzić jej nazwą:
+
+    public class OuterClass {
+        private String message = "Hello from outer class!";
+        
+        public class InnerClass {
+            private String message = "Hello from inner class!";
+            
+            public void printMessage(){
+                System.out.println(OuterClass.this.message);     //Hello from outer class!
+                System.out.println(this.message);                //Hello from inner class!
+            }
+        }
+    }
+
+### Klasy lokalne
+Zdefiniowana jest w ciele metody klasy zewnętrznej. Możemy je zdefiniować wewnątrz bloku 
+(wewnątrz metody, bloku if itp.) i nie poprzedzają ich modyfikatory dostępu 
+(public, private, protected).
+Z poziomu klasy lokalnej mamy dostęp do pól klasy zewnętrznej oraz do zmiennych lokalnych metody,
+w której są zagnieżdżone. W tym ostatnim przypadku zmienne muszą być jednak finalne 
+(przed Javą 8 konieczne było jawne oznaczanie takich zmiennych jako final, 
+od Javy 8 wystarczy, że są efektywnie finalne, czyli nie zmieniają wartości po tym, jak 
+zostały raz zainicjalizowane).
+
+    private static void localClassInstantiation(String[] args) {
+        class LocalClass {
+            @Override
+            public String toString() {
+            return "Argumenty metody: " + Arrays.toString(args);
+            }
+        }   
+        LocalClass localClassInstance = new LocalClass();
+        System.out.println(localClassInstance);
+    }
+
+### Klasy anonimowe 
+Klasy anonimowe to klasy definiowane w kodzie, które mają dokładnie jedną instancję.
+Klasa taka nie ma nazwy. W dalszej części kodu możemy już normalnie korzystać z utworzonej zmiennej. 
+W klasach anonimowych, podobnie, jak we wcześniejszym przykładzie, można korzystać ze zmiennych klasy 
+zewnętrznej oraz finalnych zmiennych metody, w której zdefiniowano klasę anonimową.
+
+    public interface GreetingModule {
+        void sayHello();
+    }
+    
+    public void someMethod() {
+        GreetingModule greeting = new GreetingModule() {
+        @Override
+            public void sayHello() {
+                System.out.println("good morning");
+            }
+        };
+    }
+
+Klasa anonimowa implementować musi wszystkie metody interfejsu; może ona dodatkowo definiować własne pola lub metody.
+
+    public interface Printer {
+        public void print (String message);
+    }
+Implementacja interfejsu:
+
+    Printer printerImpl = new Printer(){
+        @Override
+        public void print(String message);
+            System.out.println(message);
+        }
+    };
+
+Warto wspomnieć, że od Javy 8 takie proste implementacje w postaci klas anonimowych straciły na
+znaczeniu, ponieważ mogą być zastępowane wyrażeniami lambda. Powyższy przykład można byłoby uprościć
+np. do:
+
+    Printer printerImpl = message -> System.out.println(message) 
+lub
+
+    Printer printerImpl = System.out::println;
+
+# 22 Klasy abstrakcyjne
+
+# ***Do ogarnięcia***
+- java.time
 
 
 # ***Pytania do zadania komuś mądremu!***
@@ -490,5 +650,6 @@ dla każdej jednej liczby będzie to określona, stała liczba operacji (ponowni
 2. W jaki sposób odwoływać się do obiektów bez referencji?
 3. Czy jeżeli stworzę pętlę, która tworzy obiekty i nie stworze listy gdzie będą one zapisywane, 
 to co się stanie z obiektami i jak je potem wywołać?
-4. Po co tworzy się referencje do obiektu innego typu niż typ obiektu.
-5. Po co definiuje się typ zmiennej referencji obiektu?
+4. Po co tworzy się referencje do obiektu innego typu niż typ obiektu?
+5. Po co definiuje się typ zmiennej referencji obiektu? 
+6. po co definiuje się interfejs w klasie? 

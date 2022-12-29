@@ -11,14 +11,14 @@ package c_polymorphism.ex3_printer;
 //        Three other methods need to be defined in this way:
 //
 //        addToner will accept one parameter, tonerAmount of type int. First off, tonerAmount should be greater
-//        than 0 and less than or equal to 100. If this condition is met a second test must be included to test
+//        than 0 and less than or equal to 100. If this condition is met _brudnopis.a.a second test must be included to test
 //        whether tonerLevel plus tonerAmount is greater than 100. If so, the method should return -1.
 //        If not then tonerLevel should have the incoming tonerAmount added to it and the new tonerLevel should
 //        then be returned by the method. Also, if the initial condition test fails, then the method should return -1.
 //
 //        printPages will accept one parameter, pages of type int. A variable called pagesToPrint should be
 //        created and initialized to the value of the incoming parameter. A conditional check should be performed
-//        on whether the Printer class field, duplex, is either "true" or "false". If "true" then a calculation
+//        on whether the Printer class field, duplex, is either "true" or "false". If "true" then _brudnopis.a.a calculation
 //        must be performed to determine the number of pages needed to print the job double sided.
 //
 //        The pagesToPrint value is then added to the class field pagesPrinted, but the value of pagesToPrint
@@ -36,10 +36,10 @@ package c_polymorphism.ex3_printer;
 //        Tips:
 //        Remember to only paste the code from Printer class into the exercise evaluator. The DescPhone class does not
 //        need to be pasted in.
-//        You can include a message in the printPages method which informs the user that the printer is printing in
+//        You can include _brudnopis.a.a message in the printPages method which informs the user that the printer is printing in
 //        duplex mode if duplex is equal to "true" if you want.
 //        When calculating pagesToPrint if duplex is equal to "true" remember that there are two operators which
-//        can help you with this. The division "/" operator divides a number and returns only the quotient without
+//        can help you with this. The division "/" operator divides _brudnopis.a.a number and returns only the quotient without
 //        any remainder. And the modulo "%" operator divides the number and returns only the remainder,
 //        whether 0 or otherwise.
 

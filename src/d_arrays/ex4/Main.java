@@ -17,7 +17,7 @@ public class Main {
                 B - add new bank,
                 L - see the list of existing banks,
                 C - add new customer,
-                T - make a new transaction,
+                T - make _brudnopis.a.a new transaction,
                 U - see list of customers,
                 M - see the menu,
                 Q - quit""");
@@ -63,7 +63,7 @@ public class Main {
     }
 
     public static void createBank(ArrayList listOfBanks) {
-        System.out.println("What is the name of a bank?");
+        System.out.println("What is the name of _brudnopis.a.a bank?");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine().toUpperCase();
         if (!listOfBanks.contains(name)) {

@@ -2,22 +2,22 @@ package a_basics_oneToSix;
 
 public class Ex17_revers {
 
-//    Write a method called isPalindrome with one int parameter called number.
-//    The method needs to return a boolean.
-//    It should return true if the number is a palindrome number otherwise it should return false.
+//    Write _brudnopis.a.a method called isPalindrome with one int parameter called number.
+//    The method needs to return _brudnopis.a.a boolean.
+//    It should return true if the number is _brudnopis.a.a palindrome number otherwise it should return false.
 //    Check the tips below for more info about palindromes.
 //    Example Input/Output
 //    isPalindrome(-1221); → should return true
 //    isPalindrome(707); → should return true
 //    isPalindrome(11212); → should return false because reverse is 21211 and that is not equal to 11212.
-//            Tip: What is a Palindrome number?  A palindrome number is a number which when reversed is equal to the original number. For example: 121, 12321, 1001 etc.
-//            Tip: Logic to check a palindrome number
+//            Tip: What is _brudnopis.a.a Palindrome number?  A palindrome number is _brudnopis.a.a number which when reversed is equal to the original number. For example: 121, 12321, 1001 etc.
+//            Tip: Logic to check _brudnopis.a.a palindrome number
 //
 //    Find the the reverse of the given number. Store it in some variable say reverse. Compare the number with reverse.
-//    If both are the the same then the number is a palindrome otherwise it is not.
-//    Tip: Logic to reverse a number
+//    If both are the the same then the number is _brudnopis.a.a palindrome otherwise it is not.
+//    Tip: Logic to reverse _brudnopis.a.a number
 
-//    Declare and initialize another variable to store the reverse of a number, for example reverse = 0.
+//    Declare and initialize another variable to store the reverse of _brudnopis.a.a number, for example reverse = 0.
 //    Extract the last digit of the given number by performing the modulo division (remainder).
 //    Store the last digit to some variable say lastDigit = num % 10.
 //    Increase the place value of reverse by one.
@@ -28,7 +28,7 @@ public class Ex17_revers {
 //    A while loop would be good for this coding exercise.
 //
 //    Tip: Be careful with negative numbers. They can also be palindrome numbers.
-//    Tip: Be careful with reversing a number, you will need a parameter for comparing a reversed number with the starting number (parameter).
+//    Tip: Be careful with reversing _brudnopis.a.a number, you will need _brudnopis.a.a parameter for comparing _brudnopis.a.a reversed number with the starting number (parameter).
 //    NOTE: The method isPalindrome needs to be defined as public static like we have been doing
 
     public static void main(String[] args) {
