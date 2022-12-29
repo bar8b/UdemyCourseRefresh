@@ -38,16 +38,16 @@ System.out.println("to się wykona niezależnie od pętli")
 
 # 3. Metody
 
-można nie podawać wartości _brudnopis.a.a jeżeli to boolean. Jeżeli wartość _brudnopis.a.a = true to wykona się return z:
+można nie podawać wartości a jeżeli to boolean. Jeżeli wartość a = true to wykona się return z:
 
-public static int calculate(int _brudnopis.a.a, int b){
-    if(_brudnopis.a.a){
+public static int calculate(int a, int b){
+    if(a){
         return z;
     }
     return y;
 }
 
-jeżeli _brudnopis.a.a == true to metoda zakończy działanie na "return z". jeżlei _brudnopis.a.a == false to wyświetli się "return y"
+jeżeli a == true to metoda zakończy działanie na "return z". jeżlei a == false to wyświetli się "return y"
 
 # 4. Overloading / Overridding
 
@@ -81,8 +81,8 @@ jeżeli _brudnopis.a.a == true to metoda zakończy działanie na "return z". je�
     case x:                             case x -> code for x;
         // code for x;                  case y -> code for y;
         break;                          case 1, 2, 3 -> {
-    case y:                                     System.out.println("Was _brudnopis.a.a 3, _brudnopis.a.a 4 or  _brudnopis.a.a 5");
-        //code for y                            System.out.println("It was _brudnopis.a.a" + value);
+    case y:                                     System.out.println("Was a 3, a 4 or  a 5");
+        //code for y                            System.out.println("It was a" + value);
         break;                          }
     case 1: case 2: case 3:             default -> code for resst;
         //code for three cases;         }
@@ -125,11 +125,11 @@ return "bad"; -> jeżeli chcemy zwrócić z metody
   
 # 7. Enkapsulacja
 - Zdolność chowania pól i metod przed publicznym dostępem - gettery i settery
-- Building of behavior and attributes on _brudnopis.a.a single object
+- Building of behavior and attributes on a single object
 
 # 8. słowo kluczowe STATIC
 
-- Static sprawia, że nadane pole będzie przypisane do klasy, _brudnopis.a.a nie do danej instacji (obiektu) tej klasy.
+- Static sprawia, że nadane pole będzie przypisane do klasy, a nie do danej instacji (obiektu) tej klasy.
 sprawia, że coś jest wspólne dla wszystkich obektów tej klasy.
 - jeżeli zmieni się parametr static, w jednej instancji, to zmieni się on również w pozostałych.
 
@@ -140,7 +140,7 @@ wartość pola statycznego.
   - Pola Statyczne:
 
       Pola statyczne różnią się od pól instancji (obiektów) tym, że są one współdzielone 
-  przez wszystkie obiekty tej klasy, tzn. przynależą one do całej klasy, _brudnopis.a.a nie konkretnie utworzonego obiektu.
+  przez wszystkie obiekty tej klasy, tzn. przynależą one do całej klasy, a nie konkretnie utworzonego obiektu.
   używane najczęściej do przechowywania "counters", stałych jak np PI, tworzenia i kontrolowania
   dostępu do źródeł.
 
@@ -186,8 +186,8 @@ wartość pola statycznego.
   liczby i wyjście, czyli wynik sumowania.
 
           class Calc {
-             static int sum(int _brudnopis.a.a, int b) {
-                return _brudnopis.a.a + b;
+             static int sum(int a, int b) {
+                return a + b;
              }
           }
 Dzięki temu, że metoda jest statyczna, to w celu jej wywołania, nie musimy tworzyć obiektu:
@@ -251,7 +251,7 @@ Poprzez zadeklarowanie pól w nawiasach, Records sam tworzy ciało, ale nie poka
 - metody dające dostęp do danych, w nazwie nie ma getName wystarczy name  
 - metodę toString().
 
-Różnica między POJO _brudnopis.a.a Record:
+Różnica między POJO a Record:
 - recordów nie da się modyfikować - są immutable.
 
 # 11. super() / super / this / this()
@@ -307,9 +307,9 @@ jedna klasa sprawia ze obiekty tej klasy moga mieć różne postacie.
         }
     }
 
-When an instance is created, it's assigned  _brudnopis.a.a hashCode, and that hashCode is what can
-tell us if our multiple references,  are pointing to _brudnopis.a.a single instance.
-It's _brudnopis.a.a mechanism for comparison, in other words. This really is like an address for _brudnopis.a.a house,
+When an instance is created, it's assigned  a hashCode, and that hashCode is what can
+tell us if our multiple references,  are pointing to a single instance.
+It's a mechanism for comparison, in other words. This really is like an address for a house,
 which we talked about in our  examples, to explain the difference
 between references and objects or instances. Anyway, this isn't what we want printed out,  
 we really want to print out the  name and age of our student. 
@@ -394,7 +394,7 @@ pola w obiektach typu obiektowego w niniejszej klasie. Aby to zostało zrobione 
   - System.out.printf("Age = %d, Birth year = %d", age, yearOfBirth); <- działa to też tak
   - formattedString = "Your age is %d".formatted(age); <- działa to też tak
 
-# 16 Kompozycja _brudnopis.a.a dziedziczenie
+# 16 Kompozycja a dziedziczenie
 
 Kompozycja oznacza, że "obiekt jest zawarty w innym obiekcie". 
 Jest to relacja "całość – część" ( B "zawiera" A). Np. obiekty typu Pojazd zawierają obiekty typu Rozmiar, Koła, Silnik itd..
@@ -409,9 +409,9 @@ Można dziedziczyć tylko z jednej klasy.
 
 # 17 Array vs ArrayList 
 
-![](ArrayvsAraayList2.jpg)
-![](ArrayvsAraayList1.jpg)
-![](ArrayvsAraayList.jpg)
+![](ArrayvsArayList2.jpg)
+![](ArrayvsArayList1.jpg)
+![](ArrayvsArayList.jpg)
 
 # 18 Enum
 
@@ -485,11 +485,11 @@ Notacja dużego o mówi nam nie ile czasu zajmie pewna operacja,
 ale jak ten czas się zmienia w zależności od ilości danych, na których pracujemy.
 
 Przykład
-Weźmy dla przykładu algorytm, który losuje liczbę z przedziału (_brudnopis.a.a, b). Dla uproszczenia pomyślmy o tym jako o człowieku,
+Weźmy dla przykładu algorytm, który losuje liczbę z przedziału (a, b). Dla uproszczenia pomyślmy o tym jako o człowieku,
 który z worka wszystkich możliwych liczb z tego przedziału wybiera jedną. Czy czas potrzebny na wybranie tej liczby 
 zmieni się w zależności od tego czy w worku będzie 5, 50 czy 500000 liczb? Nie! Oznacza to, że algorytm ten działa
-w czasie stałym, który oznaczamy jako O(1). A dlaczego O(1) _brudnopis.a.a nie np. O(3) ? Ponieważ interesuje nas jedynie sposób,
-w jaki ten czas rośnie, _brudnopis.a.a nie sam czas. Jeśli jest stały, używamy po prostu jednostki, aby pokazać, że się nie zmienia.
+w czasie stałym, który oznaczamy jako O(1). A dlaczego O(1) a nie np. O(3) ? Ponieważ interesuje nas jedynie sposób,
+w jaki ten czas rośnie, a nie sam czas. Jeśli jest stały, używamy po prostu jednostki, aby pokazać, że się nie zmienia.
 
 Jako drugi przykład weźmy algorytm, który dla każdej liczby od zera do x wypisuje ją na konsoli. W zależności 
 od wejścia (x w tym wypadku) nasz algorytm będzie musiał wykonać różną ilość operacji — w tym wypadku
