@@ -2,28 +2,35 @@ package e_interface_AbstractCl.ex3_playlist;
 
 import java.util.*;
 
+// Create a program that implements a playlist for songs
+// Create a Song class having Title and Duration for a song.
+// The program will have an Album class containing a list of songs.
+// The albums will be stored in an ArrayList
+// Songs from different albums can be added to the playlist and will appear in the list in the order
+// they are added.
+// Once the songs have been added to the playlist, create a menu of options to:-
+// Quit,Skip forward to the next song, skip backwards to a previous song.  Replay the current song.
+// List the songs in the playlist
+// A song must exist in an album before it can be added to the playlist (so you can only play songs that
+// you own).
+// Hint:  To replay a song, consider what happened when we went back and forth from a city before we
+// started tracking the direction we were going.
+// As an optional extra, provide an option to remove the current song from the playlist
+// (hint: listiterator.remove()
+
+// Modify the playlist challenge so that the Album class uses an inner class.
+// Instead of using an ArrayList to hold its tracks, it will use an inner class called SongList
+// The inner SongList class will use an ArrayList and will provide a method to add a song.
+// It will also provide findSong() methods which will be used by the containing Album class
+// to add songs to the playlist.
+// Neither the Song class or the Main class should be changed.
 public class Main {
 
-    private static ArrayList<e_interface_AbstractCl.ex3_playlist.Album> albums = new ArrayList<e_interface_AbstractCl.ex3_playlist.Album>();
+    private static ArrayList<Album> albums = new ArrayList<Album>();
 
     public static void main(String[] args) {
-	    // Create a program that implements a playlist for songs
-        // Create a Song class having Title and Duration for a song.
-        // The program will have an Album class containing a list of songs.
-        // The albums will be stored in an ArrayList
-        // Songs from different albums can be added to the playlist and will appear in the list in the order
-        // they are added.
-        // Once the songs have been added to the playlist, create a menu of options to:-
-        // Quit,Skip forward to the next song, skip backwards to a previous song.  Replay the current song.
-        // List the songs in the playlist
-        // A song must exist in an album before it can be added to the playlist (so you can only play songs that
-        // you own).
-        // Hint:  To replay a song, consider what happened when we went back and forth from a city before we
-        // started tracking the direction we were going.
-        // As an optional extra, provide an option to remove the current song from the playlist
-        // (hint: listiterator.remove()
 
-        e_interface_AbstractCl.ex3_playlist.Album album = new e_interface_AbstractCl.ex3_playlist.Album("Stormbringer", "Deep Purple");
+        Album album = new Album("Stormbringer", "Deep Purple");
         album.addSong("Stormbringer", 4.6);
         album.addSong("Love don't mean a thing", 4.22);
         album.addSong("Holy man", 4.3);
@@ -35,7 +42,7 @@ public class Main {
         album.addSong("Soldier of fortune", 3.13);
         albums.add(album);
 
-        album = new e_interface_AbstractCl.ex3_playlist.Album("For those about to rock", "AC/DC");
+        album = new Album("For those about to rock", "AC/DC");
         album.addSong("For those about to rock", 5.44);
         album.addSong("I put the finger on you", 3.25);
         album.addSong("Lets go", 3.45);
@@ -47,7 +54,7 @@ public class Main {
         album.addSong("Night of the long knives", 5.12);
         albums.add(album);
 
-        LinkedList<e_interface_AbstractCl.ex3_playlist.Song> playList = new LinkedList<e_interface_AbstractCl.ex3_playlist.Song>();
+        LinkedList<Song> playList = new LinkedList<Song>();
         albums.get(0).addToPlayList("You can't do it right", playList);
         albums.get(0).addToPlayList("Holy man", playList);
         albums.get(0).addToPlayList("Speed king", playList);  // Does not exist
@@ -61,11 +68,11 @@ public class Main {
 
     }
 
-    private static void play(LinkedList<e_interface_AbstractCl.ex3_playlist.Song> playList) {
+    private static void play(LinkedList<Song> playList) {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean forward = true;
-        ListIterator<e_interface_AbstractCl.ex3_playlist.Song> listIterator = playList.listIterator();
+        ListIterator<Song> listIterator = playList.listIterator();
         if(playList.size() == 0) {
             System.out.println("No songs in playlist");
             return;
@@ -160,12 +167,10 @@ public class Main {
                 "4 - list songs in the playlist\n" +
                 "5 - print available actions.\n" +
                 "6 - delete current song from playlist");
-
     }
 
-
-    private static void printList(LinkedList<e_interface_AbstractCl.ex3_playlist.Song> playList) {
-        Iterator<e_interface_AbstractCl.ex3_playlist.Song> iterator = playList.iterator();
+    private static void printList(LinkedList<Song> playList) {
+        Iterator<Song> iterator = playList.iterator();
         System.out.println("================================");
         while(iterator.hasNext()) {
             System.out.println(iterator.next());
@@ -173,14 +178,6 @@ public class Main {
         System.out.println("================================");
     }
 
-
-
-    // Modify the playlist challenge so that the Album class uses an inner class.
-    // Instead of using an ArrayList to hold its tracks, it will use an inner class called SongList
-    // The inner SongList class will use an ArrayList and will provide a method to add a song.
-    // It will also provide findSong() methods which will be used by the containing Album class
-    // to add songs to the playlist.
-    // Neither the Song class or the Main class should be changed.
 
 
 

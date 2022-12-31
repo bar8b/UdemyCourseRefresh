@@ -641,6 +641,28 @@ lub
 
 # 22 Klasy abstrakcyjne
 
+Jest to klasa tworząca pewien schemat ogólny, w której znajdują się metody abstrakcyjne (niezdefiniowane) i zwykłe metody
+pełniące już jakieś swoje funkcje.
+
+Klasa dziedzicząca po klasie abstrakcyjnej, musi nadpisać wszystkie abstrakcyjne metody i przypisać działanie w subklasie.
+Obiekty subklasy mogą wywoływać metody klasy nadrzędnej tak jak w normalnym działaniu dziedziczenia.
+
+Nie można utworzyć obiektu tej klasy.
+
+## **Interface vs klasa abstrakcyjna**
+|                                                            Klasa abstrakcyjna                                                            |                                                Interface                                                 |
+|:----------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
+| ogólny wzór który daje pewne funkcjonalności klasie dziedziczącej ale również definiuje jakie funkcjonalności musza być zpersonalizowane | daje zestaw metod jakie muszą być spersonalizowane dla każdego przypadku klasy implementującej interfejs |
+ |                                             nie da się stworzyć obiektu klasy abstrakcyjnej                                              |                                   nie można stworzyć obiekt interfejsu                                   |  
+|                                    trzeba nadpisać w klasie dziedziczącej  tylko metody abstrakcyjne                                     |                        trzeba nadpisać wszystkie metody w klasie implementującej                         | 
+ |             użycie obiektu subklasy dziedziczącej po klasie abstrakcyjnej działa jak dziedziczenie w przypadku zwykłych klas             | 
+|                                                          mogą mieć konstruktor                                                           |                                      nie mogą posiadać konstruktora                                      | 
+ |                                        może posiadać zmienne składowe dziedziczone z innej klasy                                         |                           moze posiadać zmienne ale tylko public static final                            |
+|                                         może mieć private i protected methods, nie tlyko public                                          |                                  wszystkie metody interfejsu są public                                   |
+|                                                       można dziedziczyć tylko jedną klasę (abstrakcyjną lub nie)                         |                          można implementować wiele interfejsów w jednej klasie                           |
+|                                                                                                                                          |            od java 8 mogą być implementowane metody (posiadają swoją definicję w interfejsie)            |
+|                                                                                                                                          |                                 od java 9 mogą posiadam private methods                                  |
+
 # ***Do ogarnięcia***
 - java.time
 

@@ -3,9 +3,6 @@ package e_interface_AbstractCl.ex3_playlist;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-/**
- * Created by dev on 18/09/15.
- */
 public class Album {
     private String name;
     private String artist;
@@ -18,11 +15,11 @@ public class Album {
     }
 
     public boolean addSong(String title, double duration) {
-        return this.songs.add(new e_interface_AbstractCl.ex3_playlist.Song(title, duration));
+        return this.songs.add(new Song(title, duration));
     }
 
-    public boolean addToPlayList(int trackNumber, LinkedList<e_interface_AbstractCl.ex3_playlist.Song> playList) {
-        e_interface_AbstractCl.ex3_playlist.Song checkedSong = this.songs.findSong(trackNumber);
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> playList) {
+        Song checkedSong = this.songs.findSong(trackNumber);
         if(checkedSong != null) {
             playList.add(checkedSong);
             return true;
@@ -32,8 +29,8 @@ public class Album {
         return false;
     }
 
-    public boolean addToPlayList(String title, LinkedList<e_interface_AbstractCl.ex3_playlist.Song> playList) {
-        e_interface_AbstractCl.ex3_playlist.Song checkedSong = songs.findSong(title);
+    public boolean addToPlayList(String title, LinkedList<Song> playList) {
+        Song checkedSong = songs.findSong(title);
         if(checkedSong != null) {
             playList.add(checkedSong);
             return true;
@@ -42,14 +39,14 @@ public class Album {
         return false;
     }
 
-    private class SongList {
-        private ArrayList<e_interface_AbstractCl.ex3_playlist.Song> songs;
+    public class SongList {
+        private ArrayList<Song> songs;
 
         public SongList() {
-            this.songs = new ArrayList<e_interface_AbstractCl.ex3_playlist.Song>();
+            this.songs = new ArrayList<Song>();
         }
 
-        public boolean add(e_interface_AbstractCl.ex3_playlist.Song song) {
+        public boolean add(Song song) {
             if(songs.contains(song)) {
                 return false;
             }
@@ -57,8 +54,8 @@ public class Album {
             return true;
         }
 
-        private e_interface_AbstractCl.ex3_playlist.Song findSong(String title) {
-            for(e_interface_AbstractCl.ex3_playlist.Song checkedSong: this.songs) {
+        private Song findSong(String title) {
+            for(Song checkedSong: this.songs) {
                 if(checkedSong.getTitle().equals(title)) {
                     return checkedSong;
                 }
@@ -66,7 +63,7 @@ public class Album {
             return null;
         }
 
-        public e_interface_AbstractCl.ex3_playlist.Song findSong(int trackNumber) {
+        public Song findSong(int trackNumber) {
             int index = trackNumber - 1;
             if ((index > 0) && (index<songs.size())) {
                 return songs.get(index);

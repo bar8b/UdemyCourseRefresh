@@ -1,7 +1,5 @@
 package e_interface_AbstractCl.ex3_playlist;
-/**
- * Created by dev on 18/09/15.
- */
+
 public class Song {
     private String title;
     private double duration;

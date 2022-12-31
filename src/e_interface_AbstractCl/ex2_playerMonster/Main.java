@@ -43,7 +43,7 @@ public class Main {
                     System.out.println("Enter _brudnopis.a.a string: ");
                     String stringInput = sc.nextLine();
                     values.add(index, stringInput);
-                    index ++;
+                    index++;
                     break;
             }
         }
