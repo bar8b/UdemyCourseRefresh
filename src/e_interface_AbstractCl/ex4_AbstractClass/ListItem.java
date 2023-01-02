@@ -1,19 +1,33 @@
 package e_interface_AbstractCl.ex4_AbstractClass;
 
+import java.util.List;
+
 public abstract class ListItem {
-    boolean nextItem;
-    boolean previousItem;
-    String value;
 
-    public void compareTo(){
+    protected ListItem rightLink = null;
+    protected ListItem leftLink = null;
 
+    protected Object value;
+
+    public ListItem(Object value) {
+        this.value = value;
     }
 
-    public void setNextItem(boolean nextItem) {
-        this.nextItem = nextItem;
+    abstract ListItem next();
+
+    abstract ListItem setNext(ListItem item);
+
+    abstract ListItem previous();
+
+    abstract ListItem setPrevious(ListItem item);
+
+    abstract int compareTo(ListItem item);
+
+    public Object getValue() {
+        return value;
     }
 
-    public void setPreviousItem(boolean previousItem) {
-        this.previousItem = previousItem;
+    public void setValue(Object value) {
+        this.value = value;
     }
 }
