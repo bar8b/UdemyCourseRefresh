@@ -498,7 +498,7 @@ dla każdej jednej liczby będzie to określona, stała liczba operacji (ponowni
 
 ![](BigONotation.jpg)
 
-# 21 Klasy zagnieżdżone-wewnętrzne -> Inner classes (nested)
+# Klasy zagnieżdżone-wewnętrzne -> Inner classes (nested)
 
 Dobrym pomysłem użycia klas wewnętrznych jest sytuacja, w której klasa wewnętrzna nie ma sensu bez
 klasy zewnętrznej i jest z nią ściśle związana np karta sieciowa-komputer.
@@ -639,7 +639,7 @@ lub
 
     Printer printerImpl = System.out::println;
 
-# 22 Klasy abstrakcyjne
+# Klasy abstrakcyjne
 
 Jest to klasa tworząca pewien schemat ogólny, w której znajdują się metody abstrakcyjne (niezdefiniowane) i zwykłe metody
 pełniące już jakieś swoje funkcje.
@@ -666,7 +666,7 @@ Nie można utworzyć obiektu tej klasy.
 |                                                                                                                                          |                                                                                                                                                                                                                                                                                                      |
 |                                                                                                                                          |                                                                                                          
 
-# 23 Generics <T>
+# Generics <T>
 
 Aby określić jakiego typu mają być obiekty, można użyć słowa "extends" aby określić ogólny typ generyczny:
 
@@ -685,6 +685,33 @@ Można też tak:
     public class Team<T extends Player> implements Comparable<Team<T>>
 
 ale zapis <Team <T>> tylko dla implementowanych interfejsów i klas nadrzędnych.
+
+# Nazewnictwo
+
+Jeżeli chcemy stworzyć dwa obiekty dla klas o tej samej nazwie ale z innych paczek np javafx.scene.Node i org.w3c.dom.Node
+można to zrobić w następujący sposób: 
+
+    import javafx.scene.Node        <- jedna klada zaimplementowana tu 
+
+    public class Main {
+        public static void main (String [] args){
+            Node node = null;
+            org.w3c.dom.Node anotherNode = null;        <- druga klada zaimplementowana tu 
+        }
+    }
+lub
+
+    public class Main {
+        public static void main (String [] args){
+            javafx.scene.Node node = null;
+            org.w3c.dom.Node anotherNode = null;     
+        }
+    }
+
+
+
+
+
 
 # ***Do ogarnięcia***
 - java.time
