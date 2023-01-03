@@ -680,9 +680,11 @@ Coach i Manager to interfejsy (można wstawić wiele interfejsów i tylko jedną
 Dzięki zastosowaniu tego zapisu (extends player) do drużyny dla któej zostaną dodani gracze określonej dyscypliny, 
 nie będzie już można dodać gracza innej dyscypliny.
 
-można też tak:
+Można też tak:
 
     public class Team<T extends Player> implements Comparable<Team<T>>
+
+ale zapis <Team <T>> tylko dla implementowanych interfejsów i klas nadrzędnych.
 
 # ***Do ogarnięcia***
 - java.time
@@ -700,3 +702,4 @@ to co się stanie z obiektami i jak je potem wywołać?
 8. Po co tworzy się metody boolean, których zadaniem jest zrobienie czegoś, a nie danie 
 wartości true or false. np package e_interface_AbstractCl.ex4_AbstractClass.MyLinkedList -> addItem
 Czy nie łatwiej po prostu zrobić metode void?
+9. Jaka jest różnica między <T> a <T extends Team>
