@@ -666,6 +666,24 @@ Nie można utworzyć obiektu tej klasy.
 |                                                                                                                                          |                                                                                                                                                                                                                                                                                                      |
 |                                                                                                                                          |                                                                                                          
 
+# 23 Generics <T>
+
+Aby określić jakiego typu mają być obiekty, można użyć słowa "extends" aby określić ogólny typ generyczny:
+
+    Team <T extends Player>
+lub
+
+    Team <T extends Player & Coach & Manager > 
+
+Gdzie Team to klasa definiująca metody i pola dla drużyny a Player określa typ zawodników np football/cross/basketball Player,
+Coach i Manager to interfejsy (można wstawić wiele interfejsów i tylko jedną klasę)
+Dzięki zastosowaniu tego zapisu (extends player) do drużyny dla któej zostaną dodani gracze określonej dyscypliny, 
+nie będzie już można dodać gracza innej dyscypliny.
+
+można też tak:
+
+    public class Team<T extends Player> implements Comparable<Team<T>>
+
 # ***Do ogarnięcia***
 - java.time
 
@@ -678,3 +696,7 @@ to co się stanie z obiektami i jak je potem wywołać?
 4. Po co tworzy się referencje do obiektu innego typu niż typ obiektu?
 5. Po co definiuje się typ zmiennej referencji obiektu? 
 6. po co definiuje się interfejs w klasie? 
+7. Czy klasa abstrakcyjna nie musi posiadać żadnych abstrakcyjnych metod i pól?
+8. Po co tworzy się metody boolean, których zadaniem jest zrobienie czegoś, a nie danie 
+wartości true or false. np package e_interface_AbstractCl.ex4_AbstractClass.MyLinkedList -> addItem
+Czy nie łatwiej po prostu zrobić metode void?
