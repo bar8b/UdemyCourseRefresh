@@ -686,6 +686,9 @@ Można też tak:
 
 ale zapis <Team <T>> tylko dla implementowanych interfejsów i klas nadrzędnych.
 
+<?> is a shorthand for <? extends Object>, it's also known as an unbounded wildcard. 
+So you can specify any type of object in your generic.
+
 # Nazewnictwo
 
 Jeżeli chcemy stworzyć dwa obiekty dla klas o tej samej nazwie ale z innych paczek np javafx.scene.Node i org.w3c.dom.Node
@@ -708,6 +711,42 @@ lub
         }
     }
 
+# Java Collection
+
+## Binary search 
+Wyszukuje mediane posortowanej listy i sprawdza czy szukana wartość jest większa czy mniejsza od miediany.
+Jeżeli większa, robi to samo z prawą połową, jeżeli mniejsza, to z lewą. System powtarza się do momentu kiedy 
+mediana będzie równa kluczowi.
+
+## Mapy / HashMap
+Mapy działają na zasiadzie powiązania klucza z odpowiedzią:
+
+    Map <K, V> jezyk = new HashMap<>();
+K- key, V-vakue;
+K i V mogą być różnego typu.
+Klucze nie mogą się powtarzać. Jeżeli do wartości klucza przypisze się jedną wartość, a później przypisze się
+kolejną wartość, wartość przypisana do klucza zostanie nadpisana i pod danym kluczem pojawiać się będzie
+ostatnio przypisana wartość.
+
+Jeżeli zostanie wywołany:
+
+    System.out.println(jezyk.put("Polski", "trudny jezyk");
+Wówczas w konsoli zostranie wyświetlona poprzednia wartość dla danego klucza. Jeżeli klucz jest nowy,
+wyświetli się null, natomiast jeżeli miał już jakąś przypisaną wartość, zostanie ona wyświetlona.
+Wyświetlenie aktualnie przypisanej wartości do klucza wywołuje się za pomocą .get():
+
+    System.out.println(jezyk.get("Polski");
+- containsKey(K);
+- put(K, V); -
+- get(K); - wyświetla wartość spod klucza
+- keySet(); - grupuje klucze w wartości w zbiór, dzięki czemu można przeiterować po jej wartościach:
+    for (String key : jezyk.keySet()){...}
+- remove(K); lub remove (K,V); ale V musi się zgadzać w 100%
+- replace (K, V); lub replace(K, old V, new V)
+- split (" "); dzieli zdanie na fragmenty oddzielone " "
+
+
+ 
 
 
 
