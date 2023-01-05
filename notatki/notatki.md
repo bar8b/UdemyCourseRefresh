@@ -702,7 +702,7 @@ można to zrobić w następujący sposób:
             org.w3c.dom.Node anotherNode = null;        <- druga klada zaimplementowana tu 
         }
     }
-lub
+lu
 
     public class Main {
         public static void main (String [] args){
