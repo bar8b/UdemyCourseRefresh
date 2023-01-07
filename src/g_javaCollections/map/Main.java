@@ -19,21 +19,16 @@ public class Main {
         locations.get(1).addExit("E", 3);
         locations.get(1).addExit("S", 4);
         locations.get(1).addExit("N", 5);
-//        locations.get(1).addExit("Q", 0);
 
         locations.get(2).addExit("N", 5);
-//        locations.get(2).addExit("Q", 0);
 
         locations.get(3).addExit("W", 1);
-//        locations.get(3).addExit("Q", 0);
 
         locations.get(4).addExit("N", 1);
         locations.get(4).addExit("W", 2);
-//        locations.get(4).addExit("Q", 0);
 
         locations.get(5).addExit("S", 1);
         locations.get(5).addExit("W", 2);
-//        locations.get(5).addExit("Q", 0);
 
         int loc = 1;
         while (true) {
@@ -41,19 +36,28 @@ public class Main {
             if (loc == 0) {
                 break;
             }
-
             Map<String, Integer> exits = locations.get(loc).getExits();
             System.out.print("Available exits are ");
             for (String exit : exits.keySet()) {
                 System.out.print(exit + ", ");
             }
-            String direction = scanner.nextLine().toUpperCase();
-            String[] dir = direction.split(" ");
-            String [] posibleDir = new String[]{"E", "W", "N", "S", "EAST", "WEST", "NORTH", "SOUTH"};
-
+            System.out.println();
+            String[] direction = scanner.nextLine().toUpperCase().split(" ");
+            String[] posibleDir = new String[]{"E", "W", "Q", "N", "S", "EAST", "WEST", "NORTH", "QUIT", "SOUTH"};
+            int check = 0;
+            for (String d : direction) {
+                for (String p : posibleDir) {
+                    String enter = String.valueOf(d.charAt(0));
+                    if (enter.equalsIgnoreCase(p) && exits.containsKey(enter)) {
+                        loc = exits.get(enter);
+                        check++;
+                        break;
+                    }
+                }
+            }
+            if (check == 0) {
+                System.out.println("You cannot go in that direction");
+            }
         }
     }
-
-
-
 }

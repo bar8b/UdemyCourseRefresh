@@ -745,6 +745,12 @@ Wyświetlenie aktualnie przypisanej wartości do klucza wywołuje się za pomoc�
 - replace (K, V); lub replace(K, old V, new V)
 - split (" "); dzieli zdanie na fragmenty oddzielone " "
 
+# Immutable object 
+sposób napisania programu tak, że nie ma możliwości zmiany jego elementów
+Klasa immytable oznacza, że ne ma ustaionych w niej setterów, 
+Pola immutable - są final i private,
+subklasy nie mogą nadpisywać metod immutable
+
 
  
 
