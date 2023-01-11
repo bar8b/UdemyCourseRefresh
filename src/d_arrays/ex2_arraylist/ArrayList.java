@@ -1,14 +1,14 @@
-package d_arrays;
+package d_arrays.ex2_arraylist;
 
 import java.util.*;
 
-public class Ex2_arrayList {
+public class ArrayList {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
         int action;
-        ArrayList groceries = new ArrayList();
+        java.util.ArrayList groceries = new java.util.ArrayList();
         do {
             System.out.printf("Available actions:%n " +
                     "0 - to shut down%n " +
@@ -32,7 +32,7 @@ public class Ex2_arrayList {
         } while (action != 0);
     }
 
-    public static ArrayList addItem(ArrayList groceries) {
+    public static java.util.ArrayList addItem(java.util.ArrayList groceries) {
         System.out.printf("What items would you like to add?%n");
         String[] items = sc.next().split(",");
         groceries.addAll(List.of(items));
@@ -40,7 +40,7 @@ public class Ex2_arrayList {
 
     }
 
-    public static ArrayList removeItem(ArrayList groceries) {
+    public static java.util.ArrayList removeItem(java.util.ArrayList groceries) {
         System.out.printf("What item would like to remove?%n");
         String item = sc.next();
         if (!groceries.contains(item)) {
