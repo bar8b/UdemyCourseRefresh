@@ -1,5 +1,5 @@
-# 1. Operatory
-## 1.1 == =  equals.
+# Operatory
+## == =  equals.
 
 - dla zmiennych liczbowych
 int linia = 50;
@@ -15,7 +15,7 @@ if (linia = true){
     \\**==** będzie oznaczać "jeżeli linia = true, to zrób to i tamto" 
 }
 
-## 1. 2 Ternary operand -> boolean y = x ? true : false (potrójnuy operator)
+## Ternary operand -> boolean y = x ? true : false (potrójnuy operator)
 Stosowane dla wszystkich rodzajów zmiennych ale obie zmienne byszą być tego samego typu
 
 boolean *samochód* = false;
@@ -26,7 +26,7 @@ boolean *rower* = *samochód* ? true : false;
 - po ? (true) - jest wartością którą przypiszemy wartości testowanej (*samochód*) jeżeli ma wartość true.
 - po : (false) - jest wartością jaką przypiszemy jeżeli wartość testowanej(*samochód*) ma wartość false.
 
-# 2. pętla IF 
+# pętla IF 
 
 Jeżeli nie napiszemy {}, to wg zasad określonych w pętli, wykona sie pierwsza linija kodu zaraz po zainicjalizowaniu pętli: 
 
@@ -36,7 +36,7 @@ System.out.println("to się wykona");
 
 System.out.println("to się wykona niezależnie od pętli")
 
-# 3. Metody
+# Metody
 
 można nie podawać wartości a jeżeli to boolean. Jeżeli wartość a = true to wykona się return z:
 
@@ -49,7 +49,7 @@ public static int calculate(int a, int b){
 
 jeżeli a == true to metoda zakończy działanie na "return z". jeżlei a == false to wyświetli się "return y"
 
-# 4. Overloading / Overridding
+# Overloading / Overridding
 
 - **Overloading** - ta sama nazwa metody -> inne parametry. (odwołuje się to do polimorfismu javy)
   - **Stosowane do metod STATIC oraz INSTANCE.**
@@ -71,7 +71,7 @@ jeżeli a == true to metoda zakończy działanie na "return z". jeżlei a == fal
   - konstruktory (constructors), final methods i private methods nie mogą być nadpisywane.
   - 
 
-# 5 Switch case:
+#  Switch case:
 
 **typ zmiennej w () nie może być double i long**
 
@@ -111,7 +111,7 @@ return "bad"; -> jeżeli chcemy zwrócić z metody
         default -> "bad"
     }
 
-# 6. Identyfikatory dostępu 
+# Identyfikatory dostępu 
 - Class:
   - public - any other class in any package can access this class
   - protected - dla class brak
@@ -123,11 +123,11 @@ return "bad"; -> jeżeli chcemy zwrócić z metody
   - none - tzw. package access - class is accessible only to classes in the same package
   - private - no other class can access this member.
   
-# 7. Enkapsulacja
+# Enkapsulacja
 - Zdolność chowania pól i metod przed publicznym dostępem - gettery i settery
 - Building of behavior and attributes on a single object
 
-# 8. słowo kluczowe STATIC
+# słowo kluczowe STATIC
 
 - Static sprawia, że nadane pole będzie przypisane do klasy, a nie do danej instacji (obiektu) tej klasy.
 sprawia, że coś jest wspólne dla wszystkich obektów tej klasy.
@@ -209,7 +209,7 @@ Gdyby metoda nie była statyczna, to musielibyśmy to zapisać tak:
             }
         }
 
-# 9. Konstruktor (pckage b_inheritance -> Ex1_bankAccount)
+# Konstruktor (pckage b_inheritance -> Ex1_bankAccount)
 - służy do przypisania parametrów obiektu klasy,
 - używany przy tworzeniu obiektu - instancja klasy np:
     Class obiekt = new Class (parametr 1, parametr 2);
@@ -219,7 +219,7 @@ Gdyby metoda nie była statyczna, to musielibyśmy to zapisać tak:
 jest default constructor,
 - liczba parametrów, ich kolejnosć lub typ w nadpisywanych konstruktorach musi się różnić.
 
-## 9.1 Constructor chaining - łańcuch konstruktorów
+## Constructor chaining - łańcuch konstruktorów
 - Wywołanie w konstruktorze innych konstruktorów.
 - można wywołać konstruktor tylko za pomocą innego konstruktora,
 - nalezy użyć this(innyConstruktor), aby wywołać inny construktor jako parametr,
@@ -230,7 +230,7 @@ jest default constructor,
                 System.out.println("Empty constructor");
             }`
 
-# 10. POJO - Plain Old Java Object (bean/JavaBean)
+# POJO - Plain Old Java Object (bean/JavaBean)
 
 - posiada tylko pola instancji
 - służy do przechowywania danych i podawania ich między kolejnymi klasami
@@ -239,7 +239,7 @@ jest default constructor,
 - A POJO is sometimes calles an Entity, because it mirrors database entieties,
 - Another acronim is DTO, for Data Transfer Object. it's an object that can be modeled as just data.
 
-## 10.1 The Records - immytable
+## The Records - immytable
 
 Tworzy POJO - bez definiowania jego zawartości: 
 
@@ -254,7 +254,7 @@ Poprzez zadeklarowanie pól w nawiasach, Records sam tworzy ciało, ale nie poka
 Różnica między POJO a Record:
 - recordów nie da się modyfikować - są immutable.
 
-# 11. super() / super / this / this()
+# super() / super / this / this()
 
 **Stosowane tylko w metodach instancji. Nie można używać ich w elementach static**
 
@@ -285,11 +285,11 @@ konstruktor, odwołując się do klasy nadrzędnej.
 Jeżeli klasa nadrzędna nie ma domyślnego konstruktora, wówczas trzeba specjalnie wywołać super()
 konstruktorze, podając odpowiednie argumenty dla tego konstruktora.
 
-# 12 Polimorfizm
+# Polimorfizm
 
 jedna klasa sprawia ze obiekty tej klasy moga mieć różne postacie.   
 
-# 13 toString ()
+# toString ()
 
     class Main Extends Object{
         psvm(){
@@ -341,7 +341,7 @@ Aby wyświetlała się prawidłowa nazwa, należy do clasy student overrideować
 
 Wówczas wyświetli się Max is 21. Nadpisywanie klas bez ich modyfikacji nie ma sensu.
 
-# 14 Kopiowanie płytkie i głębokie (shallow copy / deep copy)
+# Kopiowanie płytkie i głębokie (shallow copy / deep copy)
 
 Klonowanie polega na stworzeniu nowego obiektu (nowej referencji) w oparciu, o istniejący już obiekt.
 - W metodzie main, w której wywoływany jest metoda clone() musi znaleźć się - throws CloneNotSupportedException
@@ -377,7 +377,7 @@ pola w obiektach typu obiektowego w niniejszej klasie. Aby to zostało zrobione 
              return odcinek;
      }
 
-# 15 Formatowanie tekstu w kodzie:
+#  Formatowanie tekstu w kodzie:
 
 - \t - tabulator
 - \n - enter
@@ -394,7 +394,7 @@ pola w obiektach typu obiektowego w niniejszej klasie. Aby to zostało zrobione 
   - System.out.printf("Age = %d, Birth year = %d", age, yearOfBirth); <- działa to też tak
   - formattedString = "Your age is %d".formatted(age); <- działa to też tak
 
-# 16 Kompozycja a dziedziczenie
+# Kompozycja a dziedziczenie
 
 Kompozycja oznacza, że "obiekt jest zawarty w innym obiekcie". 
 Jest to relacja "całość – część" ( B "zawiera" A). Np. obiekty typu Pojazd zawierają obiekty typu Rozmiar, Koła, Silnik itd..
@@ -407,13 +407,13 @@ Można dziedziczyć tylko z jednej klasy.
 - kompozycja - działa na zasadzie "B HAS A"
 - dziedziczenie - działa na zasadzie "B IS A"
 
-# 17 Array vs ArrayList 
+#  Array vs ArrayList 
 
 ![](ArrayvsArayList2.jpg)
 ![](ArrayvsArayList1.jpg)
 ![](ArrayvsArayList.jpg)
 
-# 18 Enum
+# Enum
 
 Typ wyliczeniowy, który umożliwia zadeklarowanie ograniczonej liczby możliwości wartości
 Immutable
@@ -433,7 +433,7 @@ Immutable
 
 Można w enumach tworzyć konstruktory, metody i pola.
 
-# 19 Interfejsy
+# Interfejsy
 
 Jest to zbiór metod i pól, które musi implementować dana klasa.
 Trzeba podczytać wszystkie metody do klasy w której implementowany jest interface.
@@ -461,7 +461,7 @@ które są instancją klasy implementującej dany interfejs.
 Interfejsy mogą dziedziczyć po innych interfejsacvh, wówczas interfejs dziedziczący zawiera wszystkie metody z tych interfejsów.
 Dziedziczenie oznaczane jest słowem kluczowym extends. 
 
-## 1. Moc Interfejsów!!!
+## Moc Interfejsów!!!
 
 Dzięki zastosowaniu interfejsu w wielu klasach, później można np przeiterować po każdej z klas wywołując metody,
 które są w nich zawarte: (Stworzony interfejs Informacje oraz klasy i obiekty tych klas robot i czałowie)
@@ -472,7 +472,7 @@ które są w nich zawarte: (Stworzony interfejs Informacje oraz klasy i obiekty 
     }
 metoda pokażInformacje zostanie wykonana dla obu obiektów implementujących interfejs Informacje.
 
-## 2. Moc Interfejsów!!!
+##  Moc Interfejsów!!!
 Jeżeli stworzę metodę któa implementuje zmienną typu Interfejsu, wówczas z tej metody może skorzystać każdy obiekt klasy,
 która implementuje interfejs.
 
@@ -480,7 +480,7 @@ która implementuje interfejs.
 
 
 
-# 20 Big O Notation
+# Big O Notation
 Notacja dużego o mówi nam nie ile czasu zajmie pewna operacja, 
 ale jak ten czas się zmienia w zależności od ilości danych, na których pracujemy.
 
@@ -751,7 +751,27 @@ Klasa immytable oznacza, że ne ma ustaionych w niej setterów,
 Pola immutable - są final i private,
 subklasy nie mogą nadpisywać metod immutable
 
+# equals()/compareTo()/compare()
 
+The method equals() is defined in the Object class. It is used to compare values for equality and returns a 
+boolean value (true or false). If you don't override this method in your class,  it compares if the references
+of the objects passed as arguments are equal or not. E.g., in the String class the equals() method has been 
+override and in this case equals() compares the string with the object passed as parameter.
+
+The method compareTo() is defined in the Comparable interface. If  your class objects have a natural order 
+you can implement the Comparable<T> interface and define this method.  It is used by methods like Collections.sort() 
+to compare the objects during the ordering process. That is, A.equals(B) compares if object A is equal (then return 0),
+greater than (then return a positive integer) or less than (then return a negative integer)  object B.  E.g., 
+the class Integer implements Comparable and  compareTo() method is defined because the integer has a natural
+order ( -n, ..., -2, -1, 0, 1, 2, ..., n). The returned values are useful to order the objects in a collection.
+
+But what's happens if your application needs to order a collection of objects in different ways. E.g., 
+you have a class Person with two fields (name and age) but sometimes your application must order the 
+objects by name and sometimes by age. Then you need to use the method compare(), defined in the Comparator interface. 
+The typical use is define one or more classes that implements this (e.g. we can define two classes that 
+implements Comparator, one that compare two Person objects using the age  and other that compare two Person
+objects using the name). Once this comparators are defined, those can be passed to method such as sort() 
+then the sort() method uses the comparator to compare and order the objects of the collection.
  
 
 
